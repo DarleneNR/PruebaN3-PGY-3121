@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html, body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+/* Background */
+.back {
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* background: linear-gradient(to bottom, rgba(131, 151, 180, 0.568), rgba(128, 167, 173, 0.507), rgba(80, 107, 117, 0.582)), url(https://i.pinimg.com/236x/e6/d2/0e/e6d20ec7d8e65e6eedfd36908a71fc3f.jpg); */
+    /* background: rgb(122, 189, 190);
+    background: linear-gradient(135deg, rgb(99, 155, 177) 23%, rgb(224, 205, 95) 100%);  */
+    background: -webkit-linear-gradient(75deg, rgba(172, 144, 209, 0.973) 20%, rgba(192, 163, 108, 0.89) 80%);
+    background: -moz-linear-gradient(75deg, rgba(172, 144, 209, 0.973) 20%, rgba(192, 163, 108, 0.89) 80%);
+    background: -ms-linear-gradient(75deg, rgba(172, 144, 209, 0.973) 20%, rgba(192, 163, 108, 0.89) 80%);
+    background-repeat: repeat;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 100%;
+}
+
+/* Formulario */
+#form {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    background-color: transparent;
+    width: 61%;
+    height: min-content;
+}
+.spacing {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Opciones para acciones */
+ul.nav.nav-pills.nav-justified {
+    padding-left: 56%;
+}
+
+ul li a {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    height: max-content;
+    width: max-content;
+    align-self: center;
+}
+ul li a:hover {
+    color: rgb(31, 31, 31);
+}
+
+#form-login {
+    margin-top: 15%;
+
+}
+
+#form-registration {
+    margin-top: 15%;
+
+}
+
+#form-login > .row {
+    padding-left: 100px;
+    padding-right: 100px;
+    min-width: min-content;
+}
+#form-registration > .row {
+    padding-left: 100px;
+    padding-right: 100px;
+    min-width: min-content;
+}
+
+label {
+    transform: translateY(5px);
+    color: rgba(#ffffff);
+    pointer-events: none;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    color: #636363;
+}
+
+/* Campos input */
+input.form-control {
+    background-color: #f6f6f6;
+    color: #0d0d0d;
+    padding: 3px 10px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;    
+    margin: 5px;
+    border: 0px solid #6d6d6d;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+input.form-control:focus {
+	outline: 0;
+	border: 1px solid #cfcfcf;
+}
+
+/* Botones */
+.boton_login, .boton_signup {
+    padding-top: 30px;
+    padding-left: 35%;
+    border-color: transparent;
+}
+
+#iniciar_sesion {
+    color: #272727;
+    padding: 6px 20px;
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(155, 194, 206);
+}
+#iniciar_sesion:hover {
+    color: #272727;
+    background-color: rgb(86, 170, 196);
+    transition: all 0.25s ease;
+}
+
+#registrar{
+    color: #272727;
+    padding: 6px 20px;
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(155, 194, 206);
+    margin-bottom: 90px;
+}
+#registrar:hover {
+    color: #272727;
+    background-color: rgb(86, 170, 196);
+    transition: all 0.25s ease;
+}
+
+/* Olvidaste la contraseña */
+.forgot {
+    margin-top: 90px;
+    margin-bottom: 0 auto;
+    padding-bottom: 0 auto;
+}
+
+.txt1 {
+    font-size: 13px;
+    color: #292929;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px;
+}
+.txt1:hover {
+    text-decoration: none;
+    line-height: 1.5;
+}
+.txt1:focus {
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer-minimal {
+    padding: 5px 5px;
+    text-align: center;
+    background: #272727;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer div {
+    padding: 0px 5px 0px;
+}
+
+/* Copyright */
+.footer-minimal .rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer-minimal * + .rights {
+    padding: 10px 0px 10px;
+}
+p.rights {
+    font-size: 14px;
+    color: rgba(21, 21, 21, 0.8);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Validación de Formulario */
+span.error { 
+    color: red; 
+    font-size: 0.7em;
+    margin-bottom: 10px;
+}

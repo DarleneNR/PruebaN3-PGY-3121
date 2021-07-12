@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pet Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+        {% load static %}
+        <!-- Call CSS -->
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+        <!-- Call JS -->
+        <script src = {% static "core/js/bootstrap.min.js" %}> </script>
+        <!--<script src = {% static "core/js/index.js" %}> </script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                if ( $(window).scrollTop() > 10 ) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <body>
+        <!-- Barra de menú y Bienvenida -->
+        <div class="back-menu">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg fixed-top py-1">
+                    <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="{% url 'index.html' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Nosotros</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Galería</a></li>
+                                <li class="nav-item"><a href="{% url 'donarSuscripcion.html' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
+                                <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- Sección: Welcome -->
+            <div class="main-bunner" id="welcome">
+                <div class="main-bunner-inner">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="bunner-content-modern text-center">
+                                <h1 class="text-uppercase" id="welcome">Welcome</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Barra de menú y Bienvenida -->
+
+        <!-- Sección: Opciones -->
+        <div class="back-contenido">
+            <div class="opciones">
+                <section>
+                    <div class="container">
+                        <div id="elementor-opciones">
+                            <div class="row">
+                                <!-- Opcion: Perros -->
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div id="info-perros">
+                                        <div class="container-fluid">
+                                            <div class="box-icon">
+                                                <img src="https://www.bing.com/images/blob?bcid=Tu3kJTmcyfYCng" height="110px" alt="Perros">
+                                            </div>
+                                            <div>
+                                                <h3 class="box-title">
+                                                    <a href="#">PERROS</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Opcion: Gatos -->
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div id="info-gatos">
+                                        <div class="container-fluid">
+                                            <div class="box-icon">
+                                                <img src="https://i.pinimg.com/236x/c7/73/f2/c773f227d686e91701c384b60bdc42f7.jpg" height="110px" alt="Gatos">
+                                            </div>
+                                            <div>
+                                                <h3 class="box-title">
+                                                    <a href="#">GATOS</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Opcion: Animales Pequeños -->
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div id="info-peque">
+                                        <div class="container-fluid">
+                                            <div class="box-icon">
+                                                <img src="https://th.bing.com/th/id/OIP.950a4UX7YJl_FOi01nMC4QAAAA?pid=ImgDet&rs=1" height="110px" alt="Gatos">
+                                            </div>
+                                            <div>
+                                                <h3 class="box-title">
+                                                    <a href="#">ANIMALES PEQUEÑOS</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Fin Opciones -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Fin Sección: Introducción -->
+
+        <!-- Sección: Productos a las venta -->
+        <div class="back-produc-venta">
+            <h3 id="title-prod">Nuestros productos</h3>
+            <span class="line margin-bottom-0"></span>
+
+            <ul>
+				<!-- Iteración de Productos -->
+				<li style="width: 220px;">
+					<figure class="product">
+						<div class="mediaholder">
+							<a href="#">
+								<div class="cover">
+									<img alt="Cuerda para Perros" src="https://cdn.shopify.com/s/files/1/0012/9469/6494/products/boodafreshnfloss_300x.jpg">
+								</div>
+							</a>
+							<a href="#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+						</div>
+
+						<a href="#">
+							<section>
+								<span class="product-category">Skirts</span>
+								<h5>Brown Mini Skirt</h5>
+								<span class="product-price">$79.00</span>
+							</section>
+						</a>
+					</figure>
+				</li>
+            </ul>
+		</div>
+
+
+        <!-- Fin Sección: Productos a la venta -->
+
+        <!-- Sección: Última Información -->
+        {% comment %} <div class="back-produc-venta">
+            <div class="">
+                <section>
+                    <div class="row justify-content-md-center">
+                        <!-- Servicios Extras -->
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="container-fluid serv-extras">
+                                <h2>Nuestro Productos</h2>
+                                <p>Nuestro Hotel, además de tener confortables habitaciones y una ubicación privilegiada, tiene considerada la más completa gama de servicios todas las comodidades para hacer de su estadía una grata experiencia.</p>
+                                <!-- Servicios -->
+                                <div class="row" id="list-serv">
+                                    <div class="col-xs-12 col-lg-6">
+                                        <ul>
+                                            <li>Restaurantes y Bar</li><br><br>
+                                            <li>Centro de Convenciones</li><br><br>
+                                            <li>Lavandería</li><br><br>
+                                            <li>Business center</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6">
+                                        <ul>
+                                            <li>Sauna seco</li><br><br>
+                                            <li>Piscina temperada de hidromasaje</li><br><br>
+                                            <li>Spa</li><br><br>
+                                            <li>Estacionamiento (sujeto a disponibilidad)&nbsp;</li><br><br>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="#"><button type="button" class="btn btn">Entérate más aquí</button></a>
+                            </div>
+                        </div>
+                        <!-- Contacto -->
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="container-fluid contacto">
+                                <h2>Contáctanos</h2>
+                                <!-- Formulario de Contacto -->
+                                <form class="form-horizontal" id="contacto" name="contacto" action="" method="post">
+                                    <div class="row" id="campos">
+                                        <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <label for="name" class="control-label col-xs-2">Nombre completo</label>
+                                            <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
+                                        </div>
+                                        <br><br><br>
+                                        <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <label for="email" class="control-label col-xs-2">Correo electr&oacute;nico</label>
+                                            <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
+                                        </div>
+                                        <br><br><br>
+                                        <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <label for="phone" class="control-label col-xs-2">Teléfono</label>
+                                            <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
+                                        </div>
+                                        <br><br><br>
+                                        <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <label for="message" class="control-label col-xs-2">Asunto</label>
+                                            <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí." rows="5" required></textarea>
+                                        </div>
+                                        <br><br>
+                                        <div class="botones">
+                                            <input id="reset" name="reset" type="reset" class="btn btn-secundary" value="Limpiar">
+                                            <input id="submit" name="submit" type="submit" class="btn btn-secundary" value="Enviar">
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- Fin Formulario de Contacto -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div> {% endcomment %}
+        <!-- Fin Sección: Última Información -->
+
+        <!-- Footer -->
+        <footer class="section footer-minimal context-dark">
+            <div class="container">
+                <div style="visibility: visible; animation-name: fadeIn;">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
+                        </div>
+                        <ul class="footer-minimal-nav" id="list-footer">
+                            <li><a href="#">Nosotros</a></li><span>&nbsp;|&nbsp;</span>
+                            <li><a href="#">Colaboradores</a></li><span>&nbsp;|&nbsp;</span>
+                            <li><a href="#">Productos</a></li><span>&nbsp;|&nbsp;</span>
+                            <li><a href="#">Contáctanos</a></li><span>&nbsp;|&nbsp;</span>
+                        </ul>
+                        <ul class="social-links">
+                            <li><img src="https://cdn.icon-icons.com/icons2/1/PNG/256/social_facebook_fb_35.png" height="40px" alt="Facebook"></li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <li><img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/instagram_black_logo_icon_147122.png" height="40px" alt="Instagram"></li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <li><img src="https://cdn.icon-icons.com/icons2/1/PNG/128/social_Twitter_38.png" height="40px" alt="Twitter"></li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <li><img src="https://cdn.icon-icons.com/icons2/693/PNG/128/Youtube_Rounded_Solid_icon-icons.com_61558.png" height="50px" alt="Youtube"></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="rights">
+                    <span>©&nbsp;</span>
+                    <span class="copyright-year">2021</span>
+                    <span>.&nbsp;</span>
+                    <span>Realizado por Darlene Navarro Romani | Duoc UC</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Iniciar Sesión - Pet Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <!-- Call CSS -->
+        <!-- <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'core/css/loginRegisterUser.css' %}">
+        <!-- Call JS -->
+        <script src = {% static "core/js/bootstrap.min.js" %}> </script>
+        <script src = {% static "core/js/loginRegisterUser.js" %}> </script>
+        <script src = {% static "core/js/jquery.validate.min.js" %}> </script>
+        <script src = {% static "core/js/jquery.js" %}> </script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="back">
+            <div class=" container" id="form">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="tab active" class="seccion"><a data-toggle="tab" href="#login">&nbsp;Iniciar Sesión&nbsp;</a></li>
+                            <li class="tab" class="seccion"><a data-toggle="tab" href="#signup">&nbsp;Registrarme&nbsp;</a></li>
+                        </ul>
+                    </div>
+                    <!-- Opciones de Ingreso al sitio web -->
+                    <div class="tab-content">
+                        <!-- Iniciar Sesión -->
+                        <div id="login" class="tab-pane fade in active">
+                            <form name="form-login" id="form-login" action="{% url 'verificacionUser' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="spacing"> 
+                                    <div class="row justify-content-md-center top-row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label for="usernmaneCli">Nombre de Usuario</label>
+                                            <input id="usernmaneCli" name="usernmaneCli" class="form-control" type="text" required autocomplete="off" autofocus/>
+                                        </div>
+                                        <p><br><br><br><br></p>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label for="passwordUser">Constraseña</label>
+                                            <input id="passwordUser" name="passwordUser" class="form-control" type="password" required autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <div class="boton_login">
+                                        <button href="#" id="iniciar_sesion" name="iniciar_sesion" type="submit" class="btn btn-info"/>Ingresar</button>
+                                    </div>
+                                    <div class="text-center p-t-40">
+                                        <p class="forgot"><a class="txt1" href="#" title="Haz click aquí">¿Olvidaste tu contraseña?</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Registro -->
+                        <div id="signup" class="tab-pane fade">
+                            <form name="form-registration" id="form-registration" action="{% url 'registroUser' %}" name="registrar" method="POST">
+                                {% csrf_token %}
+                                <div class="spacing"> 
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-8 col-sm-8 col-xs-8">
+                                            <label for="nroRutCli">Número RUT</label>
+                                            <input id="nroRutCli" name="nroRutCli" class="form-control" type="number" required autocomplete="off" autofocus/>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <label for="dvRun">DV</label>
+                                            <input id="dvRun" name="dvRun" class="form-control" type="text" maxlength="1" required autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label for= "nombreCli">Nombre(s)</label>
+                                            <input id="nombreCli" name="nombreCli" class="form-control" type="text" required autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label for= "apellidocli">Apellidos</label>
+                                            <input id="apellidocli" name="apellidocli" class="form-control" type="text" required autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <label for="nombreUser">Nombre de Usuario</label>
+                                            <input id="nombreUser" name="nombreUser" class="form-control" type="text" maxlength="15" required unique autocomplete="off"/>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <label for="passwordUser">Contraseña</label>
+                                            <input id="passwordUser" name="passwordUser" class="form-control" type="password" maxlength="10" required autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <div class="boton_signup">
+                                        <button id="registrar" name="registrar" type="submit" class="btn btn-info"/>Empezar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="section footer-minimal context-dark">
+            <div class="container">
+                <p class="rights">
+                    <span>©&nbsp;</span>
+                    <span class="copyright-year">2021</span>
+                    <span>.&nbsp;</span>
+                    <span>Realizado por Darlene Navarro Romani | Duoc UC</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
