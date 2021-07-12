@@ -9,11 +9,11 @@ def index(request):
     datosObtenidos = {
         'productos': productos
     }
-    return render(request, 'core/index.html', datosObtenidos)
+    return render(request, 'core/index.html/', datosObtenidos)
 
 # Login de usuarios previamente registrados
 def loginRegisterUser(request):
-    return render(request,'core/loginRegisterUser.html')
+    return render(request,'core/loginRegisterUser.html/')
 
 # Validación: Existe el usuario en la BD
 def verificacionUser (request):
@@ -23,7 +23,7 @@ def verificacionUser (request):
 
         selUsuario = Usuario.objects.get(nombreUser=username, passwordUser=password)
 
-    return redirect('index.html')
+    return redirect('index.html/')
 
 # Registro de nuevos Usuarios
 def registroUser (request):
@@ -42,11 +42,11 @@ def registroUser (request):
         selCliente = Cliente.objects.get(nroRutCli=numRut)
         Usuario.objects.create(nombreUser=nombreUser, passwordUser=passwordUser, nroRutCli=selCliente)
 
-        return redirect('index.html')
+        return redirect('index.html/')
 
 # Suscripción
 def donarSuscripcion (request):
-    return render(request,'core/donarSuscripcion.html')
+    return render(request,'core/donarSuscripcion.html/')
 
 class userObtenido:
             def __init__(self, nombre, edad):
@@ -58,10 +58,10 @@ class userObtenido:
 def obtenerUser (request):
     nombreUser = userObtenido("Usuario", "16")
     contexto = {"nombreUser": nombreUser}
-    return render(request, 'core/index.html', contexto)
+    return render(request, 'core/index.html/', contexto)
 
 # Cerrar Sesión
 def cerrarSesión (request):
     messages = print("Your form was saved") 
-    return redirect('loginRegisterUser.html')
+    return redirect('loginRegisterUser.html/')
 

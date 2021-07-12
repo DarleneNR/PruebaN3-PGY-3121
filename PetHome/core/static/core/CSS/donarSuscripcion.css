@@ -1,23 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* body {
-    min-height: 110vh;
-    width: 100%;
-    background-color: #e7e5e5;
-    line-height: 1.66667;
-    letter-spacing: -0.03em;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: subpixel-antialiased;
-    margin: 0;
-} */
-
 .back-menu{
     left: 0;
     top: 0;
     max-width: 100%;
-    background: linear-gradient(to bottom, rgba(111, 111, 112, 0.678), rgba(95, 107, 109, 0.486), rgba(43, 54, 66, 0.5822)), url(https://i.pinimg.com/236x/cb/43/cb/cb43cbeb87182c8f5fe2ff183513b595.jpg);
+    /* background: linear-gradient(to bottom, rgba(111, 111, 112, 0.678), rgba(95, 107, 109, 0.486), rgba(43, 54, 66, 0.5822)), url(https://i.pinimg.com/236x/cb/43/cb/cb43cbeb87182c8f5fe2ff183513b595.jpg); */
+    background-color: transparent;
     background-repeat: repeat;
-    padding-bottom: 55px;
+    /* padding-bottom: 55px; */
 }
 .py-2 {
     padding-top: .1rem!important;
@@ -176,184 +166,34 @@ a.navbar-brand.text-uppercase.font-weight-bold {
     color: #000000;
 }
 
-/* Sección: Welcome */
-#welcome {
-    padding: 6% 10%;
-    font-size: 32px;
-    line-height: 1.5;
-    font-weight: 700;
-    color: #FFFFFF;
-    font-size: 80px;
-    font-family: "Abadi MT Condensed Light";
-    margin-top: 0;
-    font-weight: 550;
-}
 
-#welcome.main-bunner .main-bunner-inner {
-    position: relative;
-    flex: 1;
-    z-index: 1;
-}
 
-/* Opciones */
-.opciones {
-    background-color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-radius: 5px;
-    border-width: 7px;
-    box-shadow: 0 0 0.9em #636363;
-    margin-top: -90px;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.elementor-opciones {
-    position: relative;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#info-perros, #info-gatos, #info-peque {
-    padding: 30px 30px 30px;
-    align-content: center;
-    text-decoration: none;
-}
-#info-perros:hover, #info-gatos:hover, #info-peque:hover {
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    border-color: #ffb606;
-    margin-top: -5px;
-    padding: 30px 20px 30px;
-    transition: 0.1s;
-    box-sizing: border-box;
-}
-
-.box-icon, .box-title {
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    margin: 30px auto auto;
-    /* font-family: Bahnschrift Light ,Segoe UI; */
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    line-height: 1.4;
-    font-weight: 800;
-    letter-spacing: 0px;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: subpixel-antialiased;
-    color: #242425;
-}
-a:hover {
-    text-decoration: none;
-    color: rgba(55, 58, 58, 0.925);
-    border-radius: 1px;
-    cursor: pointer;
-}
-
-/* Venta de Productos */
-.back-produc-venta {
-    background-color: #ffffff;
+/* Formulario para la Donación / Suscripción */
+#back-form-donacion {
+    left: 0;
+    top: 0;
     width: 100%;
-    position: relative;
-    margin-top: 40px;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+    background: linear-gradient(to bottom, rgba(131, 151, 180, 0.568), rgba(128, 167, 173, 0.507), rgba(80, 107, 117, 0.582)), url(https://i.pinimg.com/236x/e6/d2/0e/e6d20ec7d8e65e6eedfd36908a71fc3f.jpg);
+    background: rgb(122, 189, 190);
+    background: linear-gradient(135deg, rgb(99, 155, 177) 23%, rgb(224, 205, 95) 100%); 
+    
+    background-repeat: repeat;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 100%;
 }
 
-#title-prod {
-    font-size: 20px;
-    background-color: #fff;
-    padding-right: 10px;
-    z-index: 5;
-    position: relative;
-    float: left;
-    text-transform: uppercase;
-    color: #535353;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-}
-.line {
-    border-bottom: 1px solid #dadada;
-    width: 100%;
-    float: left;
-    height: 1px;
-    display: inline-block;
-    margin: -20px 0 25px 0;
-}
-
-/* Productos a la venta */
-#border-col {
-    border-left: #d8d8d8 0.1rem solid;
-    border-bottom: #d8d8d8 0.1rem solid;
-}
-
-.listar-productos {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-}
-
-.mostrarInfo {
-    margin: 50px 20px 50px 20px;
+.back-mensaje {
+    padding: 50px 100px 20px;
     text-align: -webkit-center;
 }
-
-.product-categoria {
-    color: #6b6b6b;
-    font-weight: 100;
-}
-.product-nombre {
+.mensaje {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #202020;
     font-weight: bolder;
-    text-transform: uppercase;
+    align-content: center;
 }
-.product-precio {
-    font-weight: bolder;
-    color: #3b3b3b;
-}
-
-
-
-a#comprarProducto {
-    color: #fff;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 13px 0;
-}
-#comprarProducto {
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-    position: absolute;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.1s 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.1s 0.3s;
-    transition: transform 0.3s, opacity 0.1s 0.3s;
-}
-#comprarProducto:hover {
-    
-
-}
-
-
-
-
-
 
 
 
