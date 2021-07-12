@@ -27,8 +27,8 @@ class Venta(models.Model):
     cantidad = models.CharField(max_length=20, null=True, blank=True, verbose_name="Cantidad", help_text="Introduzca la cantidad de los productos a comprar")
     montoVenta = models.IntegerField(verbose_name="Monto Total a pagar")
 
-    def __str__(self):
-        return self.nroVenta
+    def __int__(self):
+        return self.montoVenta
 
 # Modelo para Clientes
 class Cliente(models.Model):
@@ -38,8 +38,8 @@ class Cliente(models.Model):
     apellidocli = models.CharField(max_length=80, verbose_name="Apellido Cliente", help_text="Introduzca su(s) apellido(s)")
 
     def __str__(self):
-        return self.nroRutCli
-
+        return self.nombreCli
+        
 # Modelo para Usuarios (Clientes Registrados)
 class Usuario(models.Model):
     idUser = models.AutoField(primary_key=True, verbose_name="Identificador del Usuario")
@@ -57,4 +57,4 @@ class Suscrito(models.Model):
     fechaSuscripcion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha en la que el usuario se suscribió")
 
     def __str__(self):
-        return self.idSuscripcion
+        return self.nombreUser

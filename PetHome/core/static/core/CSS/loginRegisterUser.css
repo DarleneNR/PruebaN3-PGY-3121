@@ -153,6 +153,14 @@ input.form-control:focus {
     transition: all 0.25s ease;
 }
 
+.btn-info {
+	outline: 0;
+	border: 1px solid #d4d4d4;
+}
+.btn .btn-check:focus+ .btn.btn-info, .btn.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem #c2c2c2;
+}
+
 /* Olvidaste la contraseña */
 .forgot {
     margin-top: 90px;

@@ -155,6 +155,19 @@ a.navbar-brand.text-uppercase.font-weight-bold {
     color: #000000;
 }
 
+.btn-info {
+	outline: 0;
+	border: 1px solid #d4d4d4;
+}
+.btn .btn-check:focus+ .btn.btn-info, .btn.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem #c2c2c2;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
 /* Botón para Cerrar Sesión */
 #cerrarSesion {
     background: linear-gradient(to right, rgba(150, 128, 88, 0.918), rgba(153, 167, 117, 0.945), rgba(189, 134, 146, 0.918));
@@ -345,6 +358,9 @@ a:hover {
     border-bottom: 0px solid #dadada;
     border-color: #ffffff;
     border-width: 0.1rem;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    box-shadow: 0 0 0 0.15rem rgb(212 212 212 / 50%);
 }
 
 /* Footer  */

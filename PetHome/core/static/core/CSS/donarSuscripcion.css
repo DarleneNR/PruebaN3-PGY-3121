@@ -194,8 +194,17 @@ a.navbar-brand.text-uppercase.font-weight-bold {
     height: min-content;
 }
 
-.spacing {
-    
+.btn-info {
+	outline: 0;
+	border: 1px solid #d4d4d4;
+}
+.btn .btn-check:focus+ .btn.btn-info, .btn.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem #c2c2c2;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .back-mensaje {
@@ -305,7 +314,7 @@ input.form-control:focus {
 
 /* Opción: Des suscribirse  */
 #form-des-suscripcion {
-    padding: 15px 60px 30px;
+    padding: 15px 60px 50px;
     text-align: -webkit-center;
 }
 

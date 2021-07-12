@@ -104,7 +104,8 @@
                     <br>
 
                     <!-- Opción: Des suscribir de Donaciones -->
-                    <form name="form-des-suscripcion" id="form-des-suscripcion" action="" method="POST">
+                    <form name="form-des-suscripcion" id="form-des-suscripcion" action="{% url 'desSuscripcion' %}" method="POST">
+                        {% csrf_token %}
                         <div class="row justify-content-md-center" id="des-suscribir">
                             <div class="col-md-6 col-sm-6 col-xs-6" id="title-des-suscrito">
                                 <span>¿Ya estás suscrito y quieres dejar de estarlo?</span>

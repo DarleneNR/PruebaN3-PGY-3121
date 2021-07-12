@@ -23,6 +23,12 @@ def verificacionUser (request):
 
         selUsuario = Usuario.objects.get(nombreUser=username, passwordUser=password)
 
+        # Enviando el nombre de usuario para acciones ha realizar en la página principal
+        """ datosObtenidos = {
+            'selUsuario': selUsuario
+        }
+
+    return render(request, 'core/index.html', datosObtenidos) """
     return redirect('index.html')
 
 # Registro de nuevos Usuarios
@@ -42,27 +48,22 @@ def registroUser (request):
         selCliente = Cliente.objects.get(nroRutCli=numRut)
         Usuario.objects.create(nombreUser=nombreUser, passwordUser=passwordUser, nroRutCli=selCliente)
 
-        return redirect('index.html')
+        selUsuario = Usuario.objects.get(nroRutCli=selCliente)
+
+        # Obteniendo y Enviando el nombre de usuario para acciones ha realizar en la página principal
+        """ datosObtenidos = {
+            'selUsuario': selUsuario
+        }
+
+    return render(request, 'core/index.html', datosObtenidos) """
+    return redirect('index.html')
 
 # Suscripción
 def donarSuscripcion (request):
     return render(request,'core/donarSuscripcion.html')
 
-class userObtenido:
-    def __init__(self, nombre, edad):
-        self.nombre = nombre
-        self.edad = edad
-        super().__init__()
-
-# Obteniendo el nombre del usuario para usarlo en caso de DonaciónSuscripción
-def obtenerUser (request):
-    nombreUser = userObtenido("Usuario", "16")
-    contexto = {"nombreUser": nombreUser}
-    return render(request, 'core/index.html', contexto)
-
 # Cerrar Sesión
 def cerrarSesión (request):
-    messages = print("Your form was saved") 
     return redirect('loginRegisterUser.html')
 
 # Suscripción de Clientes registrados
@@ -76,4 +77,20 @@ def suscripcionUsuario (request):
         # Insertando al cliente identificado como Usuario Suscrito
         Suscrito.objects.create(nombreUser=selUsuario)
 
+    return redirect('index.html')
+
+def desSuscripcion (request):
+    if request.method == 'POST':
+        nombreUser = request.POST['nombreUser']
+
+        selUsuario = Suscrito.objects.get(nombreUser=nombreUser)
+
+        # Eliminando al usuario identificado
+        Suscrito.objects.filter(nombreUser=selUsuario).delete()
+
+        """ datosObtenidos = {
+            'nombreUser' : nombreUser
+        }
+
+    return render(request, 'core/index.html', datosObtenidos) """
     return redirect('index.html')
