@@ -266,7 +266,6 @@ a:hover {
     padding-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
-    /*margin: 0 0 45px 0;*/
 }
 
 #title-prod {
@@ -302,6 +301,20 @@ a:hover {
     margin: 50px 20px 50px 20px;
     text-align: -webkit-center;
 }
+
+.product-categoria {
+    color: #6b6b6b;
+    font-weight: 100;
+}
+.product-nombre {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.product-precio {
+    font-weight: bolder;
+    color: #3b3b3b;
+}
+
 
 
 a#comprarProducto {
