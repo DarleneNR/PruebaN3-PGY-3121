@@ -50,7 +50,8 @@
             <!-- Formulario para Donaciones -->
             <div class="back">
                 <div id="back-form-donacion">
-                    <form name="form-donacion" id="form-donacion" action="" method="POST">
+                    <form name="form-donacion" id="form-donacion" action="{% url 'suscripcionUsuario' %}" method="POST">
+                        {% csrf_token %}
                         <div class="back-mensaje">
                             <span class="mensaje1">
                                 Donando estarás ayudando en rescatar a animales callejeros que merecen una segunda oportunidad <br>
@@ -58,7 +59,7 @@
                             </span>
                             <br><br>
                             <span class="mensaje2">
-                                Además estarás obteniendo hasta un 5% de descuento en todas las compras que realices en la tienda online
+                                Además, estarás obteniendo hasta un 5% de descuento en todas las compras que realices en la tienda online
                             </span>
                         </div>
                         <!-- Campos -->
@@ -70,7 +71,7 @@
                             </div>
                             <div class="row justify-content-md-center">
                                 <div class="col-md-2 col-sm-2 col-xs-2">
-                                    <input id="montoDonacion" class="form-control title1" type="number" required autocomplete="off" autofocus>
+                                    <input id="montoDonacion" name="montoDonacion" class="form-control title1" type="number" required autocomplete="off" autofocus>
                                 </div>
                             </div>
                             <br>
@@ -87,23 +88,21 @@
                         </div>
                         <div class="row justify-content-md-center" id="hacer_donación">
                             <div class="col-md-2 col-sm-2 col-xs-2">
-                                <button id="abandonar" name="abandonar" type="reset" class="btn btn-info"/>Abandonar</button>
+                                <a href="{% url 'index.html' %}" class="btn btn-info" id="abandonar" name="abandonar" type="reset">Abandonar</a>
                             </div>
                             <div class="col-md-2 col-sm-2 col-xs-2">
-                                <button id="donar" name="donar" type="submit" class="btn btn-info"/>Realizar Aporte</button>
+                                <button id="donar" name="donar" type="submit" class="btn btn-info">Realizar Aporte</button>
                             </div>
                         </div>
                         <div class="row justify-content" id="mensaje3">
                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                <span>* Te llegará un email con los datos de la cuena bancaria donde deberás realizar el deposito final</span>
+                                <span>* Te llegará un email con los datos de la cuenta bancaria donde deberás realizar el deposito final</span>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
-
 
         <!-- Footer -->
         <footer class="section footer-minimal context-dark">

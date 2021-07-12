@@ -269,14 +269,14 @@ input.form-control:focus {
     background-color: rgb(87, 168, 114);
 }
 
-button#abandonar.btn.btn-info {
+#abandonar.btn.btn-info {
     color: #000000;
     margin: 40px 0px 10px 50px;
     border-radius: 5px;
     border-color: transparent;
     background-color: rgb(62, 110, 122);
 }
-button#abandonar.btn.btn-info:hover {
+#abandonar.btn.btn-info:hover {
     background-color: rgb(77, 131, 145);
 }
 

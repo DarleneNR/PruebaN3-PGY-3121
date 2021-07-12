@@ -15,10 +15,10 @@
     left: 0;
     top: 0;
     max-width: 100%;
-    background: linear-gradient(to bottom, rgba(125, 139, 135, 0.678), rgba(105, 118, 121, 0.486),rgba(70, 86, 102, 0.582)), url(https://st2.depositphotos.com/2926693/5217/v/950/depositphotos_52171865-stock-illustration-happy-cat-and-dog.jpg);
+    background: linear-gradient(to bottom, rgba(125, 139, 135, 0.678), rgba(105, 118, 121, 0.486),rgba(70, 86, 102, 0.582)), url(https://htmldemo.hasthemes.com/marten/marten/assets/img/slider/slider-single-img.png);
     background-position: -16pt 0pt;
     background-size: contain;
-    background-blend-mode: difference;
+    background-blend-mode: hard-light;
     padding-bottom: 55px;
 }
 .py-2 {
@@ -322,36 +322,29 @@ a:hover {
     color: #3b3b3b;
 }
 
-
-a#comprarProducto {
-    color: #fff;
+#agregarProducto.btn-primary {
+    background: #9DBF49;
+    font-size: 15px;
+    width: 95px;
+    height: 25px;
     text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 13px 0;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 2px;
+    display: inline-block;
+    text-transform: lowercase;
+    padding: 5px 10px 26px 10px;
+    border-bottom: 0px solid #dadada;
+    border-color: #ffffff;
+    border-width: 0.1rem;
+    margin-top: 15px;
 }
-#comprarProducto {
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-    position: absolute;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.1s 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.1s 0.3s;
-    transition: transform 0.3s, opacity 0.1s 0.3s;
+#agregarProducto.btn-primary:hover, .btn-primary::after{
+    background: #9DBF49;
+    color: #686968 !important;
+    border-bottom: 0px solid #dadada;
+    border-color: #ffffff;
 }
-#comprarProducto:hover {
-    
-
-}
-
-
 
 /* Footer  */
 .footer-minimal {
@@ -430,4 +423,20 @@ p.rights {
     font-size: 14px;
     color: rgba(21, 21, 21, 0.8);
     font-family: "Poppins", sans-serif;
+}
+
+#scrollUp {
+    background: #695284 none repeat scroll 0 0;
+    bottom: 75px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    height: 40px;
+    line-height: 43px;
+    position: fixed;
+    right: 12px;
+    text-align: center;
+    width: 38px;
+    z-index: 9999;
 }

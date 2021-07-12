@@ -46,14 +46,13 @@ def registroUser (request):
 
 # Suscripción
 def donarSuscripcion (request):
-    
     return render(request,'core/donarSuscripcion.html')
 
 class userObtenido:
-            def __init__(self, nombre, edad):
-                self.nombre = nombre
-                self.edad = edad
-                super().__init__()
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+        super().__init__()
 
 # Obteniendo el nombre del usuario para usarlo en caso de DonaciónSuscripción
 def obtenerUser (request):
@@ -66,3 +65,15 @@ def cerrarSesión (request):
     messages = print("Your form was saved") 
     return redirect('loginRegisterUser.html')
 
+# Suscripción de Clientes registrados
+def suscripcionUsuario (request):
+    if request.method == 'POST':
+        montoDonacion = request.POST['montoDonacion']
+        nombreUser = request.POST['nombreUser']
+
+        selUsuario = Usuario.objects.get(nombreUser=nombreUser)
+
+        # Insertando al cliente identificado como Usuario Suscrito
+        Suscrito.objects.create(nombreUser=selUsuario)
+
+    return redirect('index.html')
