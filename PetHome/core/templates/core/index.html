@@ -35,11 +35,11 @@
                     <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="{% url 'index.html/' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
+                                <li class="nav-item active"><a href="{% url 'index.html' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Nosotros</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Galería</a></li>
-                                <li class="nav-item"><a href="{% url 'donarSuscripcion.html/' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
+                                <li class="nav-item"><a href="{% url 'donarSuscripcion.html' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
                                 <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Cerrar Sesión</a></li>
                             </ul>
                         </div>
@@ -156,7 +156,7 @@
                 <div style="visibility: visible; animation-name: fadeIn;">
                     <div class="row">
                         <div class="col-12">
-                            <a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
+                            <a href="{% url 'index.html' %}" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
                         </div>
                         <ul class="footer-minimal-nav" id="list-footer">
                             <li><a href="#">Nosotros</a></li><span>&nbsp;|&nbsp;</span>

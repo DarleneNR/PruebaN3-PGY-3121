@@ -4,7 +4,7 @@
         <title>Pet Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
         {% load static %}
         <!-- Call CSS -->
@@ -35,11 +35,11 @@
                     <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="{% url 'index.html/' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
+                                <li class="nav-item active"><a href="{% url 'index.html' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Nosotros</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Galería</a></li>
-                                <li class="nav-item"><a href="{% url 'donarSuscripcion.html/' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
+                                <li class="nav-item"><a href="{% url 'donarSuscripcion.html' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
                                 <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Cerrar Sesión</a></li>
                             </ul>
                         </div>
@@ -47,20 +47,62 @@
                 </nav>
             </header>
         
-
-        <!-- Formulario para Donaciones -->
-        <div id="back-form-donacion">
-            <form name="form-donacion" id="form-donacion" action="" method="POST">
-                <div class="back-mensaje">
-                    <span class="mensaje">
-                        Donando estarás ayudando a rescatar y entregar una mejor calidad de vida a animales callejeros que merecen una segunda oportunidad <br>
-                        ¡ELLOS ESTARÁN AGRADECIDOS CONTIGO!
-                    </span>
+            <!-- Formulario para Donaciones -->
+            <div class="back">
+                <div id="back-form-donacion">
+                    <form name="form-donacion" id="form-donacion" action="" method="POST">
+                        <div class="back-mensaje">
+                            <span class="mensaje1">
+                                Donando estarás ayudando en rescatar a animales callejeros que merecen una segunda oportunidad <br>
+                                ¡ELLOS ESTARÁN AGRADECIDOS CONTIGO!
+                            </span>
+                            <br><br>
+                            <span class="mensaje2">
+                                Además estarás obteniendo hasta un 5% de descuento en todas las compras que realices en la tienda online
+                            </span>
+                        </div>
+                        <!-- Campos -->
+                        <div> 
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <span class="title1">Monto a donar</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <input id="montoDonacion" class="form-control title1" type="number" required autocomplete="off" autofocus>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <span class="title2">Confirma la acción ingresando tu nombre de usuario</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <input id="nombreUser" name="nombreUser" class="form-control" type="text" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-center" id="hacer_donación">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <button id="abandonar" name="abandonar" type="reset" class="btn btn-info"/>Abandonar</button>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <button id="donar" name="donar" type="submit" class="btn btn-info"/>Realizar Aporte</button>
+                            </div>
+                        </div>
+                        <div class="row justify-content" id="mensaje3">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <span>* Te llegará un email con los datos de la cuena bancaria donde deberás realizar el deposito final</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
+        </div>
 
-            </form>
-        </div>
-        </div>
 
 
         <!-- Footer -->
@@ -68,7 +110,7 @@
             <div class="container">
                 <div style="visibility: visible; animation-name: fadeIn;">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
                             <a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
                         </div>
                         <ul class="footer-minimal-nav" id="list-footer">

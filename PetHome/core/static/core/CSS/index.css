@@ -15,8 +15,10 @@
     left: 0;
     top: 0;
     max-width: 100%;
-    background: linear-gradient(to bottom, rgba(111, 111, 112, 0.678), rgba(95, 107, 109, 0.486), rgba(43, 54, 66, 0.5822)), url(https://i.pinimg.com/236x/cb/43/cb/cb43cbeb87182c8f5fe2ff183513b595.jpg);
-    background-repeat: repeat;
+    background: linear-gradient(to bottom, rgba(125, 139, 135, 0.678), rgba(105, 118, 121, 0.486),rgba(70, 86, 102, 0.582)), url(https://st2.depositphotos.com/2926693/5217/v/950/depositphotos_52171865-stock-illustration-happy-cat-and-dog.jpg);
+    background-position: -16pt 0pt;
+    background-size: contain;
+    background-blend-mode: difference;
     padding-bottom: 55px;
 }
 .py-2 {
@@ -321,7 +323,6 @@ a:hover {
 }
 
 
-
 a#comprarProducto {
     color: #fff;
     text-align: center;
@@ -349,14 +350,6 @@ a#comprarProducto {
     
 
 }
-
-
-
-
-
-
-
-
 
 
 

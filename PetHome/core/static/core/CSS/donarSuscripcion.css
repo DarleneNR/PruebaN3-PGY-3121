@@ -4,10 +4,10 @@
     left: 0;
     top: 0;
     max-width: 100%;
-    /* background: linear-gradient(to bottom, rgba(111, 111, 112, 0.678), rgba(95, 107, 109, 0.486), rgba(43, 54, 66, 0.5822)), url(https://i.pinimg.com/236x/cb/43/cb/cb43cbeb87182c8f5fe2ff183513b595.jpg); */
-    background-color: transparent;
-    background-repeat: repeat;
-    /* padding-bottom: 55px; */
+    background: linear-gradient(to bottom, rgba(111, 111, 112, 0.678), rgba(95, 107, 109, 0.486), rgba(43, 54, 66, 0.5822)), url(https://st.depositphotos.com/1031359/1375/v/950/depositphotos_13756215-stock-illustration-dog-paws.jpg);
+    background-position: -16pt 0pt;
+    background-size: contain;
+    padding-bottom: 55px;
 }
 .py-2 {
     padding-top: .1rem!important;
@@ -88,7 +88,7 @@
     color: rgb(238, 238, 238);
 }
 
-@media (max-width: 908px) {
+@media (max-width: 910px) {
     .navbar {
         background: #fff;
     }
@@ -166,39 +166,128 @@ a.navbar-brand.text-uppercase.font-weight-bold {
     color: #000000;
 }
 
-
-
-/* Formulario para la Donación / Suscripción */
-#back-form-donacion {
+/* Donación */
+.back {
     left: 0;
     top: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(131, 151, 180, 0.568), rgba(128, 167, 173, 0.507), rgba(80, 107, 117, 0.582)), url(https://i.pinimg.com/236x/e6/d2/0e/e6d20ec7d8e65e6eedfd36908a71fc3f.jpg);
-    background: rgb(122, 189, 190);
-    background: linear-gradient(135deg, rgb(99, 155, 177) 23%, rgb(224, 205, 95) 100%); 
-    
-    background-repeat: repeat;
+    /* background: linear-gradient(to bottom, rgb(161 164 169 / 66%), rgb(135 170 120 / 69%), rgb(125 137 142 / 73%)), url(https://st.depositphotos.com/1031359/1375/v/950/depositphotos_13756215-stock-illustration-dog-paws.jpg);
+    background-position: -50pt 0pt;
+    background-repeat: repeat; */
+    /* padding-bottom: 50px;
+    padding-top: 50px; */
+    height: 100%;
+    padding: 60px 50px 60px 60px;
+}
+/* Formulario para la Donación / Suscripción */
+#back-form-donacion {
+    width: 90%;
+    height: 100%;
+    background-color: rgba(226, 226, 226, 0.301);
     padding-bottom: 50px;
     padding-top: 50px;
-    height: 100%;
+    margin: 50px 50px 0px 50px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    height: min-content;
+}
+
+.spacing {
+    
 }
 
 .back-mensaje {
-    padding: 50px 100px 20px;
+    padding: 15px 63px 30px;
     text-align: -webkit-center;
 }
-.mensaje {
+.mensaje1 {
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    color: #202020;
+    font-size: 17px;
+    color: #000000;
+    font-weight: bolder;
+    align-content: center;
+}
+.mensaje2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #353c8a;
     font-weight: bolder;
     align-content: center;
 }
 
+.title1 {
+    margin-left: 45.5%;
+    color: #212d36;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    align-content: center;
+}
+.title2 {
+    margin-left: 5%;
+    color: #212d36;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    align-content: center;
+}
 
+/* Campos input */
+input.form-control {
+    background-color: #f6f6f6;
+    color: #0d0d0d;
+    padding: 3px 10px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;    
+    margin: 5px;
+    border: 0px solid #6d6d6d;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+input.form-control:focus {
+	outline: 0;
+	border: 0.5px solid #cfcfcf;
+}
 
+#hacer_donación .btn-info {
+    color: #000000;
+    margin: 40px 0px 0px 25px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(84, 155, 108);
+}
+#hacer_donación .btn-info:hover {
+    background-color: rgb(87, 168, 114);
+}
 
+button#abandonar.btn.btn-info {
+    color: #000000;
+    margin: 40px 0px 10px 50px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(62, 110, 122);
+}
+button#abandonar.btn.btn-info:hover {
+    background-color: rgb(77, 131, 145);
+}
 
+#mensaje3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #811818;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 40px;
+}
 
 /* Footer  */
 .footer-minimal {
