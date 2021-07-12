@@ -255,7 +255,10 @@ input.form-control {
 }
 input.form-control:focus {
 	outline: 0;
-	border: 0.5px solid #cfcfcf;
+	border: 0px solid #cfcfcf;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgb(93 151 147 / 32%);
 }
 
 #hacer_donación .btn-info {
@@ -288,6 +291,47 @@ input.form-control:focus {
     margin-left: 30px;
     margin-top: 40px;
 }
+
+.line {
+    border-bottom: 1px solid #ffffff;
+    width: 90%;
+    height: 1px;
+    display: inline-block;
+    margin-left: 5%;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    padding-top: 60px;
+}
+
+/* Opción: Des suscribirse  */
+#form-des-suscripcion {
+    padding: 15px 60px 30px;
+    text-align: -webkit-center;
+}
+
+#title-des-suscrito {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+#des-suscribir.btn.btn-info {
+    color: #000000;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(238 27 27 / 95%);
+}
+#des-suscribir.btn.btn-info:hover {
+    background-color: rgb(245 39 44 / 95%);
+}
+
+
+
+
+
+
 
 /* Footer  */
 .footer-minimal {

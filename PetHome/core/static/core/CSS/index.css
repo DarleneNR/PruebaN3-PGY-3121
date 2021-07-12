@@ -344,6 +344,7 @@ a:hover {
     color: #686968 !important;
     border-bottom: 0px solid #dadada;
     border-color: #ffffff;
+    border-width: 0.1rem;
 }
 
 /* Footer  */

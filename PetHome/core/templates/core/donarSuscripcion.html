@@ -47,7 +47,7 @@
                 </nav>
             </header>
         
-            <!-- Formulario para Donaciones -->
+            <!-- Formulario para Donaciones y Suscripción -->
             <div class="back">
                 <div id="back-form-donacion">
                     <form name="form-donacion" id="form-donacion" action="{% url 'suscripcionUsuario' %}" method="POST">
@@ -59,7 +59,7 @@
                             </span>
                             <br><br>
                             <span class="mensaje2">
-                                Además, estarás obteniendo hasta un 5% de descuento en todas las compras que realices en la tienda online
+                                Además, te estarás SUSCRIBIENDO para obtener hasta un 5% de descuento en todas las compras que realices en la tienda online
                             </span>
                         </div>
                         <!-- Campos -->
@@ -100,6 +100,25 @@
                             </div>
                         </div>
                     </form>
+                    <h1><span class="line margin-bottom-0"></span></h1>
+                    <br>
+
+                    <!-- Opción: Des suscribir de Donaciones -->
+                    <form name="form-des-suscripcion" id="form-des-suscripcion" action="" method="POST">
+                        <div class="row justify-content-md-center" id="des-suscribir">
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="title-des-suscrito">
+                                <span>¿Ya estás suscrito y quieres dejar de estarlo?</span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-center" id="des-suscribir">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input id="nombreUser" name="nombreUser" class="form-control" type="text" placeholder="Introduce tu nombre de usuario" required autocomplete="off">
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <button id="des-suscribir" name="des-suscribir" type="submit" class="btn btn-info">Desuscribirme</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -110,7 +129,7 @@
                 <div style="visibility: visible; animation-name: fadeIn;">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
+                            <a href="{% url 'index.html' %}" class="navbar-brand text-uppercase font-weight-bold">Pet Home</a>
                         </div>
                         <ul class="footer-minimal-nav" id="list-footer">
                             <li><a href="#">Nosotros</a></li><span>&nbsp;|&nbsp;</span>
