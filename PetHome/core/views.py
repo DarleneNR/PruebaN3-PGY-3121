@@ -23,8 +23,8 @@ def verificacionUser (request):
 
         selUsuario = Usuario.objects.get(nombreUser=username, passwordUser=password)
 
-        # Enviando el nombre de usuario para acciones ha realizar en la página principal
-        """ datosObtenidos = {
+        """ # Enviando el nombre de usuario para acciones ha realizar en la página principal
+        datosObtenidos = {
             'selUsuario': selUsuario
         }
 
@@ -48,10 +48,10 @@ def registroUser (request):
         selCliente = Cliente.objects.get(nroRutCli=numRut)
         Usuario.objects.create(nombreUser=nombreUser, passwordUser=passwordUser, nroRutCli=selCliente)
 
-        selUsuario = Usuario.objects.get(nroRutCli=selCliente)
+        """ selUsuario = Usuario.objects.get(nroRutCli=selCliente)
 
         # Obteniendo y Enviando el nombre de usuario para acciones ha realizar en la página principal
-        """ datosObtenidos = {
+        datosObtenidos = {
             'selUsuario': selUsuario
         }
 
