@@ -4,7 +4,12 @@ from .models import Producto, Venta, Cliente, Usuario, Suscrito
 # Create your views here.
 # Pagina Inicial
 def index(request):
-    return render(request,'core/index.html')
+    # Mostrar los Productos a la Venta
+    productos = Producto.objects.all()
+    datosObtenidos = {
+        'productos': productos
+    }
+    return render(request, 'core/index.html', datosObtenidos)
 
 # Login de usuarios previamente registrados
 def loginRegisterUser(request):
@@ -39,7 +44,7 @@ def registroUser (request):
 
         return redirect('index.html')
 
-# Suscriipción
+# Suscripción
 def donarSuscripcion (request):
     return render(request,'core/donarSuscripcion.html')
 
@@ -55,8 +60,8 @@ def obtenerUser (request):
     contexto = {"nombreUser": nombreUser}
     return render(request, 'core/index.html', contexto)
 
-
 # Cerrar Sesión
 def cerrarSesión (request):
     messages = print("Your form was saved") 
     return redirect('loginRegisterUser.html')
+
