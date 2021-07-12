@@ -420,3 +420,19 @@ p.rights {
     color: rgba(21, 21, 21, 0.8);
     font-family: "Poppins", sans-serif;
 }
+
+#scrollUp {
+    background: #695284 none repeat scroll 0 0;
+    bottom: 75px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    font-size: 28px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    right: 12px;
+    text-align: center;
+    width: 38px;
+    z-index: 9999;
+}
