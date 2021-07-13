@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
 .i-body {
     background: #fff;
-    padding: 55px 55px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding: 45px 35px; */
+    padding-top: 60px;
+    padding-top: 60px;
+    width: 100%;
 }
 
-.frame-actualizar {
+.frame-eliminar {
     background-color: rgba(235, 237, 241, 0.548);
     box-shadow: 0px 1px rgba(60, 61, 61, 0.815);
     align-content: center;
     margin: 11px;
-    padding: 25px 20px;
-    margin-left: 10%;
-    width: 80%;
+    padding: 25px 35px;
+    margin-left: 15%;
+    width: 70%;
     border: 2px solid #8b8b99d2;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -28,7 +28,7 @@
     padding: 35px 0px 40px 0px;
     text-align: center;
 }
-#form-actualizar-cli {
+#form-eliminar-cli {
     padding-top: 30px;
     font-family: "Poppins", sans-serif;
     color: rgb(34, 34, 34);
@@ -53,7 +53,7 @@ div a#volver_cli {
     color: rgba(12, 12, 12, 0.849);
     float: right;
     background: #54777e94;
-    margin-right: 165px;
+    margin-right: 255px;
     margin-bottom: 30px;
     border: thin solid rgb(70, 69, 69);
     text-decoration: none;
@@ -63,7 +63,7 @@ div a#volver_cli {
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
     height: 35px;
 }
-div button#actualizar_cli {
+div button#eliminar_cli {
     color: rgba(12, 12, 12, 0.849);
     float: right;
     background: #54777e94;
@@ -80,7 +80,7 @@ div button#actualizar_cli {
 div a#volver_cli:hover {
     background: #55948bb9;
 }
-div button#actualizar_cli:hover {
+div button#eliminar_cli:hover {
     background: #55948bb9;
 }
 
@@ -90,7 +90,7 @@ div button#actualizar_cli:hover {
     text-align: center;
     background: #272727;
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     width: 100%;
 }
 footer div {

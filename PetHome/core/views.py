@@ -156,3 +156,16 @@ def updClientes (request):
         Cliente.objects.filter(nroRutCli=nroRutCli).update(nombreCli=nombreCli, apellidocli=apellidocli)
 
     return redirect('mantenedorClientes.html')
+
+def formDelClientes (request):
+    return render(request, 'core/formDelClientes.html')
+
+def delClientes (request):
+    if request.method == 'POST':
+        nombreUserDel = request.POST['nombreUserDel']
+
+        """ selCliente = Cliente.objects.get(nroRutCli=nombreUserDel) """
+
+        Cliente.objects.filter(nombreCli=nombreUserDel).delete()
+
+    return redirect('mantenedorClientes.html')

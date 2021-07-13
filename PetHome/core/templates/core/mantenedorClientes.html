@@ -34,7 +34,7 @@
                 <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Administración Pet Home</a>
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a href="{% url 'mantenedorClientes.html' %}" class="nav-link text-uppercase font-weight-bold">Clientes</a></li>
+                            <li class="nav-item active"><a href="" class="nav-link text-uppercase font-weight-bold">Clientes</a></li>
                             <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Usuarios</a></li>
                             <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
                             <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Ventas</a></li>
@@ -53,7 +53,7 @@
                     <a href="{% url 'formAddClientes.html' %}"><img src="https://cdn.icon-icons.com/icons2/2650/PNG/512/add_plus_insert_icon_160937.png" height="35px">
                     </a></span>
                 </div>
-                <table id="table-info" name="readClientes" class="table table-bordered table-hover table-striped" action="" method="POST">
+                <table id="table-info" name="readClientes" class="table table-bordered table-hover table-striped" action="{% url 'delClientes' %}" method="POST">
                     <thead class="thead-light">
                         <tr>
                             <th>Número Rut</th>
@@ -69,15 +69,43 @@
                                 <td>{{i.nombreCli}}</td>
                                 <td>{{i.apellidocli}}</td>
                                 <td>
-                                    <a href="{% url 'formUpdClientes.html' %}"><img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" 
-                                    height="30px" name="actualizar_descuento"></a>  |  
-                                    <a href=""><img src="https://cdn.icon-icons.com/icons2/2783/PNG/512/trash_delete_remove_icon_177244.png" 
-                                    height="35px" name="eliminar_descuento"></a>
+                                    <a href="{% url 'formUpdClientes.html' %}">
+                                        <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" height="30px" name="actualizar_cliente">
+                                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
+                                    <a href="{% url 'formDelClientes.html' %}" id="eliminar_cliente" onclick="eliminar">
+                                        <img src="https://cdn.icon-icons.com/icons2/2783/PNG/512/trash_delete_remove_icon_177244.png" height="35px">
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
+
+                <!-- Modal confirmar la eliminación registro -->
+                <form id="form-eliminar-cli" action="" name="form-eliminar-cli" method="POST" style="display:none !important;">
+                    {% csrf_token %}
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <div class="row justify-content-md-center">
+                                <!-- Campos para el ingreso de datos -->
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Vuelva a digitar el número rut: </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="nroRutCliDel" name="nroRutCliDel" type="number" placeholder="09.876.543-2" minlength="5" required/>
+                                </div> 
+                                    <br><br>
+                                </div>
+                                <!-- Botones -->
+                                <div class="botones">
+                                    <a href="{% url 'mantenedorClientes.html' %}" type="reset" class="btn btn-info" id="volver_cli" name="volver_cli">Cancelar</a>
+                                    <button type="submit" class="btn btn-primary" id="eliminar_cli" name="eliminar_cli" value="eliminar_cli">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>   
+                    </div> 
+                </form>
+                <!-- Fin Modal confirmar agregar registro -->
             </div>
         </div>
         <!-- Fin Tabla -->

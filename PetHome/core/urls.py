@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import index, loginRegisterUser, verificacionUser, registroUser, donarSuscripcion, cerrarSesión, suscripcionUsuario, desSuscripcion, listadoCompras, obtenerDatosCompraProducto, mantenedorClientes, formAddClientes, addClientes, formUpdClientes, updClientes
+from .views import index, loginRegisterUser, verificacionUser, registroUser, donarSuscripcion, cerrarSesión, suscripcionUsuario, desSuscripcion, listadoCompras, obtenerDatosCompraProducto, mantenedorClientes, formAddClientes, addClientes, formUpdClientes, updClientes, formDelClientes, delClientes
 
 urlpatterns = [
     path('', loginRegisterUser, name="loginRegisterUser.html"),
@@ -18,4 +18,6 @@ urlpatterns = [
     path('addClientes', addClientes, name="addClientes"),
     path('formUpdClientes', formUpdClientes, name="formUpdClientes.html"),
     path('updClientes', updClientes, name="updClientes"),
+    path('formDelClientes/', formDelClientes, name="formDelClientes.html"),
+    path('delClientes', delClientes, name="delClientes"),
 ]
