@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Producto, Venta, Cliente, Usuario, Suscrito
 
 # Create your views here.
@@ -77,6 +78,8 @@ def suscripcionUsuario (request):
         # Insertando al cliente identificado como Usuario Suscrito
         Suscrito.objects.create(nombreUser=selUsuario)
 
+        """ messages.info(request, 'El usuario ha sido suscrito correctamente') """
+
     return redirect('index.html')
 
 def desSuscripcion (request):
@@ -94,3 +97,14 @@ def desSuscripcion (request):
 
     return render(request, 'core/index.html', datosObtenidos) """
     return redirect('index.html')
+
+def listadoCompras (request):
+    return render(request,'core/listadoCompras.html')
+
+def obtenerDatosCompraProducto (request):
+    if request.method == 'POST':
+        idProducto = request.POST['idProducto']
+
+        selProducto = Producto.objects.get(idProducto=idProducto)
+    
+    return render(request,'core/listadoCompras.html', selProducto)

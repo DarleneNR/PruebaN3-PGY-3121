@@ -322,6 +322,9 @@ a:hover {
     text-align: -webkit-center;
 }
 
+.product-id {
+    font-size: xx-small;
+}
 .product-categoria {
     color: #6b6b6b;
     font-weight: 100;
@@ -333,6 +336,12 @@ a:hover {
 .product-precio {
     font-weight: bolder;
     color: #3b3b3b;
+}
+.product-stock {
+    font-weight: bolder;
+    color: #1f1f1f;
+    font-weight: 100;
+    font-size: smaller;
 }
 
 #agregarProducto.btn-primary {
@@ -351,6 +360,7 @@ a:hover {
     border-color: #ffffff;
     border-width: 0.1rem;
     margin-top: 15px;
+    margin-bottom: 30px;
 }
 #agregarProducto.btn-primary:hover, .btn-primary::after{
     background: #9DBF49;
