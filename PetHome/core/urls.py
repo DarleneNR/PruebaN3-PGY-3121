@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import index, loginRegisterUser, verificacionUser, registroUser, donarSuscripcion, cerrarSesión, suscripcionUsuario, desSuscripcion, listadoCompras, obtenerDatosCompraProducto, mantenedorClientes, formAddClientes, addClientes, formUpdClientes, updClientes, formDelClientes, delClientes
+from .views import index, loginRegisterUser, verificacionUser, registroUser, donarSuscripcion, cerrarSesión, suscripcionUsuario, desSuscripcion, listadoCompras, obtenerDatosCompraProducto, mantenedorClientes, formAddClientes, addClientes, formUpdClientes, updClientes, formDelClientes, delClientes, mantenedorUsuarios, formAddUsuarios, addUsuarios, formUpdUsuarios, updUsuarios, formDelUsuarios, delUsuarios
 
 urlpatterns = [
     path('', loginRegisterUser, name="loginRegisterUser.html"),
@@ -16,8 +16,15 @@ urlpatterns = [
     path('mantenedorClientes/', mantenedorClientes, name="mantenedorClientes.html"),
     path('formAddClientes/', formAddClientes, name="formAddClientes.html"),
     path('addClientes', addClientes, name="addClientes"),
-    path('formUpdClientes', formUpdClientes, name="formUpdClientes.html"),
+    path('formUpdClientes/', formUpdClientes, name="formUpdClientes.html"),
     path('updClientes', updClientes, name="updClientes"),
     path('formDelClientes/', formDelClientes, name="formDelClientes.html"),
     path('delClientes', delClientes, name="delClientes"),
+    path('mantenedorUsuarios/', mantenedorUsuarios, name="mantenedorUsuarios.html"),
+    path('formAddUsuarios/', formAddUsuarios, name="formAddUsuarios.html"),
+    path('addUsuarios', addUsuarios, name="addUsuarios"),
+    path('formUpdUsuarios/', formUpdUsuarios, name="formUpdUsuarios.html"),
+    path('updUsuarios', updUsuarios, name="updUsuarios"),
+    path('formDelUsuarios', formDelUsuarios, name="formDelUsuarios.html"),
+    path('delUsuarios', delUsuarios, name="delUsuarios"),
 ]

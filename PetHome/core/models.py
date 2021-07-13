@@ -37,8 +37,8 @@ class Cliente(models.Model):
     nombreCli = models.CharField(max_length=70, verbose_name="Nombre Cliente", help_text="Introduzca su nombre completo")
     apellidocli = models.CharField(max_length=80, verbose_name="Apellido Cliente", help_text="Introduzca su(s) apellido(s)")
 
-    def __str__(self):
-        return self.nombreCli
+    def __int__(self):
+        return self.nroRutCli
         
 # Modelo para Usuarios (Clientes Registrados)
 class Usuario(models.Model):

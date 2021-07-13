@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Actualizar cliente - Pet Home</title>
+        <title>Actualizar usuario - Pet Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
         {% load static %}
         <!-- Call CSS -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'core/style/formUpdClientes.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/formUpdUsuarios.css' %}">
         <!-- Call JS -->
         <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
         <!--<script src = {% static "core/js/index.js" %}> </script>-->
@@ -21,40 +21,33 @@
         <div class="i-body">
             <div class="frame-actualizar">
                 <div id="title" class="row justify-content-md-center">
-                    <h1 class="justify-content-md-center">Actualizar cliente</h1>
+                    <h1 class="justify-content-md-center">Actualizar usuarios</h1>
                 </div>
-                <form id="form-actualizar-cli" action="{% url 'updClientes' %}" name="actualizar_cliente" method="POST">
+                <form id="form-actualizar-user" action="{% url 'updUsuarios' %}" name="actualizar_usuario" method="POST">
                     {% csrf_token %}
                     <div class="row justify-content-md-center">
                         <div class="col-md-7 col-sm-7 col-xs-7">
                             <div class="row justify-content-md-center">
                                 <!-- Campos para el ingreso de datos -->
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Número Rut:</label>
+                                    <label class="control-label col-xs-6" for="nombreUser" style="padding-bottom: 45px;">Nombre del usuario:</label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="nombreUser" name="nombreUser" type="text" placeholder="" required/>
+                                </div> 
+                                <br><br>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="passwordUser" style="padding-bottom: 45px;">Contraseña </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="passwordUser" name="passwordUser" type="text" placeholder=""/>
+                                </div>
+                                <br><br>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Confirma los cambios con el rut del usuario: </label>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">
                                     <input class="form-control" id="nroRutCli" name="nroRutCli" type="number" placeholder="09.876.543-2" minlength="5" required/>
-                                </div> 
-                                <br><br>
-                                {% comment %} <div class="col-md-1 col-sm-1 col-xs-1">
-                                    <label class="control-label col-xs-6" for="dvRun" style="padding-bottom: 45px;">DV:</label>
-                                </div> 
-                                <div class="col-md-2 col-sm-2 col-xs-2">
-                                    <input class="form-control" id="dvRun" name="dvRun" type="text" placeholder="" minlength="1" maxlengh="1" required/>
-                                </div> 
-                                <br><br> {% endcomment %}
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <label class="control-label col-xs-6" for="nombreCli" style="padding-bottom: 45px;">Nombre completo: </label>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <input class="form-control" id="nombreCli" name="nombreCli" type="text" placeholder="" minlength="4"/>
-                                </div>
-                                <br><br>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <label class="control-label col-xs-6" for="apellidocli" style="padding-bottom: 45px;">Apellido(s): </label>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <input class="form-control" id="apellidocli" name="apellidocli" type="text" placeholder="" minlength="4"/>
                                 </div>
                                 <br><br>
                             </div>
@@ -62,8 +55,8 @@
                             
                             <!-- Botones -->
                             <div class="botones">
-                                <a href="{% url 'mantenedorClientes.html' %}" type="reset" class="btn btn-info" id="volver_cli" name="volver_cli">Volver</a>
-                                <button type="submit" class="btn btn-primary" id="actualizar_cli" name="actualizar_cli" value="actualizar_cli">Agregar</button>
+                                <a href="{% url 'mantenedorUsuarios.html' %}" type="reset" class="btn btn-info" id="volver_user" name="volver_user">Volver</a>
+                                <button type="submit" class="btn btn-primary" id="actualizar_user" name="actualizar_user" value="actualizar_user">Actualizar</button>
                             </div>
                         </div>
                     </div>

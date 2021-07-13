@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.i-body {
+    background: #fff;
+    /* padding: 45px 35px; */
+    padding-top: 60px;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.frame-eliminar {
+    background-color: rgba(235, 237, 241, 0.548);
+    box-shadow: 0px 1px rgba(60, 61, 61, 0.815);
+    align-content: center;
+    margin: 11px;
+    padding: 25px 35px;
+    margin-left: 15%;
+    width: 70%;
+    border: 2px solid #8b8b99d2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+/* Formulario */
+#title {
+    font-family: "Bahnschrift SemiBold";
+    color: rgb(17, 17, 17);
+    padding: 35px 0px 40px 0px;
+    text-align: center;
+}
+#form-eliminar-user {
+    padding-top: 30px;
+    font-family: "Poppins", sans-serif;
+    color: rgb(34, 34, 34);
+    align-content: center;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    color: rgb(32, 32, 32);
+    padding-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form div input, textarea {
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+div a#volver_user {
+    color: rgba(12, 12, 12, 0.849);
+    float: right;
+    background: #54777e94;
+    margin-right: 255px;
+    margin-bottom: 30px;
+    border: thin solid rgb(70, 69, 69);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    height: 35px;
+}
+div button#eliminar_user {
+    color: rgba(12, 12, 12, 0.849);
+    float: right;
+    background: #54777e94;
+    margin-right: -198px;
+    margin-bottom: 30px;
+    border: thin solid rgb(70, 69, 69);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    height: 35px;
+}
+div a#volver_user:hover {
+    background: #55948bb9;
+}
+div button#eliminar_user:hover {
+    background: #55948bb9;
+}
+
+/* Footer */
+.footer-minimal {
+    padding: 5px 5px;
+    text-align: center;
+    background: #272727;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer div {
+    padding: 0px 0px 0px;
+}
+
+/* Copyright */
+.footer-minimal .rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer-minimal * + .rights {
+    padding: 10px 0px 10px;
+}
+p.rights {
+    font-size: 14px;
+    color: rgba(21, 21, 21, 0.8);
+    font-family: "Poppins", sans-serif;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Eliminar cliente - Pet Home</title>
+        <title>Eliminar usuario - Pet Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
         {% load static %}
         <!-- Call CSS -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'core/style/formDelClientes.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/formDelUsuarios.css' %}">
         <!-- Call JS -->
         <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
         <!--<script src = {% static "core/js/index.js" %}> </script>-->
@@ -21,16 +21,16 @@
         <div class="i-body">
             <div class="frame-eliminar">
                 <div id="title" class="row justify-content-md-center">
-                    <h1 class="justify-content-md-center">Eliminando a cliente del registro</h1>
+                    <h1 class="justify-content-md-center">Eliminando a usuario del registro</h1>
                 </div>
             <div class="row justify-content-md-center">
-                <form id="form-eliminar-cli" action="{% url 'delClientes' %}" name="form-eliminar-cli" method="POST">
+                <form id="form-eliminar-user" action="{% url 'delUsuarios' %}" name="form-eliminar-user" method="POST">
                     {% csrf_token %}
                     <div class="row justify-content-md-center">
                         <div class="col-md-7 col-sm-7 col-xs-7">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-7 col-sm-7 col-xs-7">
-                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Vuelva a digitar el nombre del cliente: </label>
+                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Vuelva a digitar el nombre de usuario: </label>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">
@@ -41,8 +41,8 @@
                             <br><br>
                             <div class="row justify-content-md-center">
                                 <div class="botones">
-                                    <a href="{% url 'mantenedorClientes.html' %}" type="reset" class="btn btn-info" id="volver_cli" name="volver_cli">Volver</a>
-                                    <button type="submit" class="btn btn-primary" id="eliminar_cli" name="eliminar_cli" value="eliminar_cli">Eliminar</button>
+                                    <a href="{% url 'mantenedorUsuarios.html' %}" type="reset" class="btn btn-info" id="volver_user" name="volver_user">Volver</a>
+                                    <button type="submit" class="btn btn-primary" id="eliminar_user" name="eliminar_user" value="eliminar_user">Eliminar</button>
                                 </div>
                             </div>
                         </div>   

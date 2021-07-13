@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Clientes - Pet Home</title>
+        <title>Usuarios - Pet Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
         {% load static %}
         <!-- Call CSS -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'core/style/mantenedorClientes.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/mantenedorUsuarios.css' %}">
         <!-- Call JS -->
         <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
         <!--<script src = {% static "core/js/index.js" %}> </script>-->
@@ -45,34 +45,34 @@
         </header>
 
         <!-- Tabla -->
-        <div class="container " id="infoClientes">
-            <h1>Detalle de Información - Clientes</h1>
+        <div class="container " id="infoUsuarios">
+            <h1>Detalle de Información - Usuarios</h1>
             <div class="row justify-content-md-center">
                 <div>
-                    <span id="add">Agregar nuevo cliente 
-                    <a href="{% url 'formAddClientes.html' %}"><img src="https://cdn.icon-icons.com/icons2/2650/PNG/512/add_plus_insert_icon_160937.png" height="35px">
+                    <span id="add">Agregar nuevo Usuario  
+                    <a href="{% url 'formAddUsuarios.html' %}"><img src="https://cdn.icon-icons.com/icons2/2650/PNG/512/add_plus_insert_icon_160937.png" height="35px">
                     </a></span>
                 </div>
-                <table id="table-info" name="readClientes" class="table table-bordered table-hover table-striped" action="{% url 'delClientes' %}" method="POST">
+                <table id="table-info" name="readUsuarios" class="table table-bordered table-hover table-striped" action="" method="POST">
                     <thead class="thead-light">
                         <tr>
                             <th>Número Rut</th>
-                            <th>Nombre Completo</th>
-                            <th>Apellido(s)</th>
+                            <th>Nombre Usuario</th>
+                            <th>Contraseña</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for i in clientes %}
+                        {% for i in usuarios %}
                             <tr style="text-align: -webkit-center;">
-                                <td>{{i.nroRutCli}}</td>
-                                <td>{{i.nombreCli}}</td>
-                                <td>{{i.apellidocli}}</td>
+                                <td>{{i.nroRutCli|slice:"3" }}</td>
+                                <td>{{i.nombreUser}}</td>
+                                <td>{{i.passwordUser}}</td>
                                 <td>
-                                    <a href="{% url 'formUpdClientes.html' %}">
-                                        <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" height="30px" name="actualizar_cliente">
+                                    <a href="{% url 'formUpdUsuarios.html' %}">
+                                        <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" height="30px" name="actualizar_usuarios">
                                     </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
-                                    <a href="{% url 'formDelClientes.html' %}" id="eliminar_cliente" onclick="eliminar">
+                                    <a href="{% url 'formDelUsuarios.html' %}" id="eliminar_usuario">
                                         <img src="https://cdn.icon-icons.com/icons2/2783/PNG/512/trash_delete_remove_icon_177244.png" height="35px">
                                     </a>
                                 </td>
@@ -80,6 +80,32 @@
                         {% endfor %}
                     </tbody>
                 </table>
+
+                <!-- Modal confirmar la eliminación registro -->
+                <form id="form-eliminar-user" action="" name="form-eliminar-user" method="POST" style="display:none !important;">
+                    {% csrf_token %}
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <div class="row justify-content-md-center">
+                                <!-- Campos para el ingreso de datos -->
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="nombreUserDel" style="padding-bottom: 45px;">Vuelva a digitar el nombre del usuario: </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="nombreUserDel" name="nombreUserDel" type="text" minlength="5" required/>
+                                </div> 
+                                    <br><br>
+                                </div>
+                                <!-- Botones -->
+                                <div class="botones">
+                                    <a href="{% url 'mantenedorUsuarios.html' %}" type="reset" class="btn btn-info" id="volver_user" name="volver_user">Cancelar</a>
+                                    <button type="submit" class="btn btn-primary" id="eliminar_user" name="eliminar_user" value="eliminar_user">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>   
+                    </div> 
+                </form>
+                <!-- Fin Modal confirmar agregar registro -->
             </div>
         </div>
         <!-- Fin Tabla -->

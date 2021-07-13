@@ -169,3 +169,57 @@ def delClientes (request):
         Cliente.objects.filter(nombreCli=nombreUserDel).delete()
 
     return redirect('mantenedorClientes.html')
+
+# Usuarios
+def mantenedorUsuarios (request):
+    # Mostrar los Clientes registrados
+    usuarios = Usuario.objects.order_by("nroRutCli", "nombreUser")
+    usuariosObtenidos = {
+        'usuarios': usuarios
+    }
+
+    return render(request, 'core/mantenedorUsuarios.html', usuariosObtenidos)
+
+def formAddUsuarios (request):
+    return render(request, 'core/formAddUsuarios.html')
+
+def addUsuarios (request):
+    if request.method == 'POST':
+        nroRutCli = request.POST['nroRutCli']
+        nombreUser = request.POST['nombreUser']
+        passwordUser = request.POST['passwordUser']
+
+        # 1. Verificando que el rut del Cliente exista 
+        selCliente = Cliente.objects.get(nroRutCli=nroRutCli)
+
+        # 2.- Agregando datos a la tabla Usuario
+        Usuario.objects.create(nombreUser=nombreUser, passwordUser=passwordUser, nroRutCli=selCliente)
+    return redirect('mantenedorUsuarios.html')
+
+def formUpdUsuarios (request):
+    return render(request, 'core/formUpdUsuarios.html')
+
+def updUsuarios (request):
+    if request.method == 'POST':
+        nombreUser = request.POST['nombreUser']
+        passwordUser = request.POST['passwordUser']
+        nroRutCli = request.POST['nroRutCli']
+        
+        """ selUsuario = Usuario.objects.get(nroRutCli=nroRutCli) """
+
+        Usuario.objects.filter(nroRutCli=nroRutCli).update(nombreUser=nombreUser, passwordUser=passwordUser)
+
+    return redirect('mantenedorUsuarios.html')
+
+def formDelUsuarios (request):
+    return render(request, 'core/formDelUsuarios.html')
+
+def delUsuarios (request):
+    if request.method == 'POST':
+        nombreUserDel = request.POST['nombreUserDel']
+
+        """ selUsuario = Usuario.objects.get(nombreUser=nombreUserDel) """
+
+        Usuario.objects.filter(nombreUser=nombreUserDel).delete()
+
+    return redirect('mantenedorUsuarios.html')
