@@ -38,15 +38,19 @@
                                 <li class="nav-item active"><a href="{% url 'index.html' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Nosotros</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Galería</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Mis movimientos</a>
+                                    {% comment %} <ul class="sub-menu">
+                                        <li><a href="" style="margin-bottom:-5px;margin-left:-30px;font-size:15px;" class="sub-item">Historial de Compras</a></li>
+                                        <li><a href="" style="margin-bottom:-10px;margin-left:-30px;font-size:15px;padding-bottom: 25px;" class="sub-item">Historial de Donaciones</a></li>
+                                    </ul> {% endcomment %}
+                                </li>
                                 <li class="nav-item"><a href="{% url 'donarSuscripcion.html' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
-                                <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Cerrar Sesión</a></li>
+                                <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Salir</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </header>
-        
             <!-- Formulario para Donaciones y Suscripción -->
             <div class="back">
                 <div id="back-form-donacion">

@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* body {
-    min-height: 110vh;
-    width: 100%;
-    background-color: #e7e5e5;
-    line-height: 1.66667;
-    letter-spacing: -0.03em;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: subpixel-antialiased;
-    margin: 0;
-} */
-
 .back-menu{
     left: 0;
     top: 0;
@@ -31,17 +20,12 @@
     transition: all 0.4s;
 }
 
-/* ul {
-    padding-left: 1rem;
-    padding-right: 0px auto;
-} */
-
 .navbar .nav-link {
     color: #ffffff;
     margin-top: 18px;
     margin-bottom: 18px;
     /*margin-right: 10px;*/
-    margin-left: 40px;
+    margin-left: 62px;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
     display: inline-block;
@@ -56,7 +40,7 @@
     margin-top: 18px;
     margin-bottom: 18px;
     margin-left: 0px;
-    margin-right: 183px;
+    margin-right: 50px;
 }
 
 .navbar .nav-link:hover,
@@ -105,7 +89,7 @@
     color: rgb(238, 238, 238);
 }
 
-@media (max-width: 908px) {
+@media (max-width: 910px) {
     .navbar {
         background: #fff;
     }
@@ -169,7 +153,7 @@ header ul ul {
     transition: all.2s;
     padding: 0;
     font-family: "Microsoft Sans Serif";
-    margin-left: 16px;
+    margin-left: 38px;
 }
 
 .sub-menu {
@@ -210,19 +194,6 @@ header ul li a.sub-item:hover {
 .navbar.active .nav-link#suscripcion:hover,
 .navbar.active .nav-link#suscripcion:focus {
     color: #000000;
-}
-
-.btn-info {
-	outline: 0;
-	border: 1px solid #d4d4d4;
-}
-.btn .btn-check:focus+ .btn.btn-info, .btn.btn-info:focus {
-    box-shadow: 0 0 0 0.2rem #c2c2c2;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
 }
 
 /* Botón para Cerrar Sesión */

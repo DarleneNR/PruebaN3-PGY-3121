@@ -24,7 +24,7 @@ html, body {
 
 /* Formulario */
 #form {
-    padding-top: 1.5%;
+    padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
@@ -189,7 +189,7 @@ input.form-control:focus {
     text-align: center;
     background: #272727;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 footer div {
