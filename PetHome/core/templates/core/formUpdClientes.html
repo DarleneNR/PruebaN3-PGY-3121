@@ -9,7 +9,7 @@
         {% load static %}
         <!-- Call CSS -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'core/style/formAddClientes.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/formUpdClientes.css' %}">
         <!-- Call JS -->
         <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
         <!--<script src = {% static "core/js/index.js" %}> </script>-->
@@ -19,41 +19,42 @@
     <body>
         <!-- Formulario -->
         <div class="i-body">
-            <div class="frame-agregar">
+            <div class="frame-actualizar">
                 <div id="title" class="row justify-content-md-center">
-                    <h1 class="justify-content-md-center">Agrega un cliente</h1>
+                    <h1 class="justify-content-md-center">Actualización de Clientes</h1>
                 </div>
-                <form id="form-agregar-cli" action="{% url 'addClientes' %}" name="agregar_cliente" method="POST">
+                <form id="form-actualizar-cli" action="{% url 'updClientes' %}" name="actualizar_cliente" method="POST">
                     {% csrf_token %}
                     <div class="row justify-content-md-center">
                         <div class="col-md-7 col-sm-7 col-xs-7">
                             <div class="row justify-content-md-center">
                                 <!-- Campos para el ingreso de datos -->
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
                                     <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Número Rut:</label>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
                                     <input class="form-control" id="nroRutCli" name="nroRutCli" type="number" placeholder="09.876.543-2" minlength="5" required/>
-                                </div>
-                                <div class="col-md-1 col-sm-1 col-xs-1">
+                                </div> 
+                                <br><br>
+                                {% comment %} <div class="col-md-1 col-sm-1 col-xs-1">
                                     <label class="control-label col-xs-6" for="dvRun" style="padding-bottom: 45px;">DV:</label>
-                                </div>
+                                </div> 
                                 <div class="col-md-2 col-sm-2 col-xs-2">
                                     <input class="form-control" id="dvRun" name="dvRun" type="text" placeholder="" minlength="1" maxlengh="1" required/>
-                                </div>
-                                <br><br>
+                                </div> 
+                                <br><br> {% endcomment %}
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <label class="control-label col-xs-6" for="nombreCli" style="padding-bottom: 45px;">Nombre completo: </label>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <input class="form-control" id="nombreCli" name="nombreCli" type="text" placeholder="" minlength="4" required/>
+                                    <input class="form-control" id="nombreCli" name="nombreCli" type="text" placeholder="" minlength="4"/>
                                 </div>
                                 <br><br>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <label class="control-label col-xs-6" for="apellidocli" style="padding-bottom: 45px;">Apellido(s): </label>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <input class="form-control" id="apellidocli" name="apellidocli" type="text" placeholder="" minlength="4" required/>
+                                    <input class="form-control" id="apellidocli" name="apellidocli" type="text" placeholder="" minlength="4"/>
                                 </div>
                                 <br><br>
                             </div>
@@ -62,7 +63,7 @@
                             <!-- Botones -->
                             <div class="botones">
                                 <a href="{% url 'mantenedorClientes.html' %}" type="reset" class="btn btn-info" id="volver_cli" name="volver_cli">Volver</a>
-                                <button type="submit" class="btn btn-primary" id="agregar_cli" name="agregar_cli" value="volver_cli">Agregar</button>
+                                <button type="submit" class="btn btn-primary" id="actualizar_cli" name="actualizar_cli" value="actualizar_cli">Agregar</button>
                             </div>
                         </div>
                     </div>

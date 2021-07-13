@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 .i-body {
     background: #fff;
-    padding: 50px 0px 50px 0px;
-    height: 100%;
+    padding: 45px 35px;
+    padding-top: 65px;
 }
 
-.frame-agregar {
+.frame-actualizar {
     background-color: rgba(235, 237, 241, 0.548);
     box-shadow: 0px 1px rgba(60, 61, 61, 0.815);
     align-content: center;
@@ -27,15 +25,15 @@
     padding: 35px 0px 40px 0px;
     text-align: center;
 }
-#form-agregar-cli {
+#form-actualizar-cli {
     padding-top: 30px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Microsoft YaHei";
     color: rgb(34, 34, 34);
     align-content: center;
 }
 
 label {
-    font-family: "Poppins", sans-serif;
+    font-family: "Bahnschrift";
     color: rgb(32, 32, 32);
     padding-top: 5px;
     font-weight: bold;
@@ -62,11 +60,11 @@ div a#volver_cli {
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
     height: 35px;
 }
-div button#agregar_cli {
+div button#actualizar_cli {
     color: rgba(12, 12, 12, 0.849);
     float: right;
     background: #54777e94;
-    margin-right: -185px;
+    margin-right: -198px;
     margin-bottom: 30px;
     border: thin solid rgb(70, 69, 69);
     text-decoration: none;
@@ -79,7 +77,7 @@ div button#agregar_cli {
 div a#volver_cli:hover {
     background: #55948bb9;
 }
-div button#agregar_cli:hover {
+div button#actualizar_cli:hover {
     background: #55948bb9;
 }
 
@@ -89,7 +87,7 @@ div button#agregar_cli:hover {
     text-align: center;
     background: #272727;
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     width: 100%;
 }
 footer div {

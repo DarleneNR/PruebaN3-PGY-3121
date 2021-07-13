@@ -120,12 +120,39 @@ def obtenerDatosCompraProducto (request):
 # Clientes
 def mantenedorClientes (request):
     # Mostrar los Clientes registrados
-    clientes = Cliente.objects.all()
+    clientes = Cliente.objects.order_by("nroRutCli", "nombreCli")
     clientesObtenidos = {
         'clientes': clientes
     }
+
     return render(request, 'core/mantenedorClientes.html', clientesObtenidos)
 
-def formAddClientes(request):
-    
+def formAddClientes (request):
     return render(request, 'core/formAddClientes.html')
+
+def addClientes (request):
+    if request.method == 'POST':
+        nroRutCli = request.POST['nroRutCli']
+        dvRun = request.POST['dvRun']
+        nombreCli = request.POST['nombreCli']
+        apellidocli = request.POST['apellidocli']
+
+        # Insertando al cliente identificado como Usuario Suscrito
+        Cliente.objects.create(nroRutCli=nroRutCli,dvRun=dvRun,nombreCli=nombreCli,apellidocli=apellidocli)
+
+    return redirect('mantenedorClientes.html')
+
+def formUpdClientes (request):
+    return render(request, 'core/formUpdClientes.html')
+
+def updClientes (request):
+    if request.method == 'POST':
+        nroRutCli = request.POST['nroRutCli']
+        nombreCli = request.POST['nombreCli']
+        apellidocli = request.POST['apellidocli']
+        
+        selCliente = Cliente.objects.get(nroRutCli=nroRutCli)
+
+        Cliente.objects.filter(nroRutCli=nroRutCli).update(nombreCli=nombreCli, apellidocli=apellidocli)
+
+    return redirect('mantenedorClientes.html')

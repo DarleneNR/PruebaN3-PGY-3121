@@ -69,16 +69,13 @@
                                 <td>{{i.nombreCli}}</td>
                                 <td>{{i.apellidocli}}</td>
                                 <td>
-                                    <a href=""><img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" 
+                                    <a href="{% url 'formUpdClientes.html' %}"><img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" 
                                     height="30px" name="actualizar_descuento"></a>  |  
                                     <a href=""><img src="https://cdn.icon-icons.com/icons2/2783/PNG/512/trash_delete_remove_icon_177244.png" 
                                     height="35px" name="eliminar_descuento"></a>
                                 </td>
                             </tr>
                         {% endfor %}
-
-                    
-
                     </tbody>
                 </table>
             </div>
