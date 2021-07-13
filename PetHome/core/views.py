@@ -4,7 +4,7 @@ from .models import Producto, Venta, Cliente, Usuario, Suscrito
 
 # Create your views here.
 # Pagina Inicial
-def index(request):
+def index (request):
     # Mostrar los Productos a la Venta
     productos = Producto.objects.all()
     datosObtenidos = {
@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'core/index.html', datosObtenidos)
 
 # Login de usuarios previamente registrados
-def loginRegisterUser(request):
+def loginRegisterUser (request):
     return render(request,'core/loginRegisterUser.html')
 
 # Validación: Existe el usuario en la BD
@@ -61,7 +61,7 @@ def registroUser (request):
 
 # Suscripción
 def donarSuscripcion (request):
-    return render(request,'core/donarSuscripcion.html')
+    return render(request, 'core/donarSuscripcion.html')
 
 # Cerrar Sesión
 def cerrarSesión (request):
@@ -114,7 +114,18 @@ def obtenerDatosCompraProducto (request):
             'selProducto' : selProducto
         }
 
-    return render(request,'core/listadoCompras.html', datosObtenidos)
+    return render(request, 'core/listadoCompras.html', datosObtenidos)
 
 # MANTENEDORES
+# Clientes
+def mantenedorClientes (request):
+    # Mostrar los Clientes registrados
+    clientes = Cliente.objects.all()
+    clientesObtenidos = {
+        'clientes': clientes
+    }
+    return render(request, 'core/mantenedorClientes.html', clientesObtenidos)
 
+def formAddClientes(request):
+    
+    return render(request, 'core/formAddClientes.html')

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Agregar nuevo cliente - Pet Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+        {% load static %}
+        <!-- Call CSS -->
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/formAddClientes.css' %}">
+        <!-- Call JS -->
+        <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
+        <!--<script src = {% static "core/js/index.js" %}> </script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Formulario -->
+        <div class="i-body">
+            <div class="frame-agregar">
+                <div id="title" class="row justify-content-md-center">
+                    <h1 class="justify-content-md-center">Agrega un cliente</h1>
+                </div>
+                <form id="form-agregar-cli" action="" name="agregar_cliente" method="POST">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <div class="row justify-content-md-center">
+                                <!-- Campos para el ingreso de datos -->
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <label class="control-label col-xs-6" for="nroRutCli" style="padding-bottom: 45px;">Número Rut:</label>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <input class="form-control" id="nroRutCli" name="nroRutCli" type="number" placeholder="09.876.543-2" minlength="5" required/>
+                                </div>
+                                <div class="col-md-1 col-sm-1 col-xs-1">
+                                    <label class="control-label col-xs-6" for="dvRun" style="padding-bottom: 45px;">DV:</label>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <input class="form-control" id="dvRun" name="dvRun" type="text" placeholder="" minlength="1" maxlengh="1" required/>
+                                </div>
+                                <br><br>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="nombreCli" style="padding-bottom: 45px;">Nombre completo: </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="nombreCli" name="nombreCli" type="text" placeholder="" minlength="4" required/>
+                                </div>
+                                <br><br>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <label class="control-label col-xs-6" for="apellidocli" style="padding-bottom: 45px;">Apellido(s): </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <input class="form-control" id="apellidocli" name="apellidocli" type="text" placeholder="" minlength="4" required/>
+                                </div>
+                                <br><br>
+                            </div>
+                            <!-- Fin Campos para el ingreso de datos -->
+                            
+                            <!-- Botones -->
+                            <div class="botones">
+                                <button type="reset" class="btn btn-info" id="volver_cli" name="volver_cli" value="volver">Volver</button>
+                                <button type="submit" class="btn btn-primary" id="agregar_cli" name="agregar_cli" value="volver_cli">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Fin Formulario -->
+
+        <!-- Footer -->
+        <footer class="section footer-minimal context-dark">
+            <div class="container">
+                <p class="rights">
+                    <span>©&nbsp;</span>
+                    <span class="copyright-year">2021</span>
+                    <span>.&nbsp;</span>
+                    <span>Realizado por Darlene Navarro Romani | Duoc UC</span>
+                </p>
+            </div>
+        </footer>
+    </boody>
+</html>

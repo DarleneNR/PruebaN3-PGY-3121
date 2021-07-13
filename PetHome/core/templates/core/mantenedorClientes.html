@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Clientes - Pet Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+        {% load static %}
+        <!-- Call CSS -->
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'core/style/mantenedorClientes.css' %}">
+        <!-- Call JS -->
+        <script type="text/javascript" src = {% static "core/js/bootstrap.min.js" %}> </script>
+        <!--<script src = {% static "core/js/index.js" %}> </script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <script type="text/javascript">
+        $(function () {
+            $(window).on('scroll', function () {
+                if ( $(window).scrollTop() > 10 ) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <body>
+        <!-- Barra de menú y Bienvenida -->
+       <header class="navbar-light shadow-sm">
+            <nav class="navbar navbar-expand-lg fixed-top py-0">
+                <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Administración Pet Home</a>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a href="{% url 'mantenedorClientes.html' %}" class="nav-link text-uppercase font-weight-bold">Clientes</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Usuarios</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
+                            <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Ventas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Tabla -->
+        <div class="container " id="infoClientes">
+            <h1>Detalle de Información - Clientes</h1>
+            <div class="row justify-content-md-center">
+                <div>
+                    <span id="add">Agregar nuevo cliente 
+                    <a href="{% url 'formAddClientes.html' %}"><img src="https://cdn.icon-icons.com/icons2/2650/PNG/512/add_plus_insert_icon_160937.png" height="35px">
+                    </a></span>
+                </div>
+                <table id="table-info" name="readClientes" class="table table-bordered table-hover table-striped" action="" method="POST">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Número Rut</th>
+                            <th>Nombre Completo</th>
+                            <th>Apellido(s)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in clientes %}
+                            <tr style="text-align: -webkit-center;">
+                                <td>{{i.nroRutCli}}</td>
+                                <td>{{i.nombreCli}}</td>
+                                <td>{{i.apellidocli}}</td>
+                                <td>
+                                    <a href=""><img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-on-a-notes-paper_icon-icons.com_56784.png" 
+                                    height="30px" name="actualizar_descuento"></a>  |  
+                                    <a href=""><img src="https://cdn.icon-icons.com/icons2/2783/PNG/512/trash_delete_remove_icon_177244.png" 
+                                    height="35px" name="eliminar_descuento"></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                    
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Fin Tabla -->
+
+        <!-- Footer -->
+        <footer class="section footer-minimal context-dark">
+            <div class="container">
+                <p class="rights">
+                    <span>©&nbsp;</span>
+                    <span class="copyright-year">2021</span>
+                    <span>.&nbsp;</span>
+                    <span>Realizado por Darlene Navarro Romani | Duoc UC</span>
+                </p>
+            </div>
+        </footer>
+    </boody>
+</html>
