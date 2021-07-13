@@ -63,10 +63,6 @@ def registroUser (request):
 def donarSuscripcion (request):
     return render(request, 'core/donarSuscripcion.html')
 
-# Cerrar Sesión
-def cerrarSesión (request):
-    return redirect('loginRegisterUser.html')
-
 # Suscripción de Clientes registrados
 def suscripcionUsuario (request):
     if request.method == 'POST':
@@ -87,10 +83,8 @@ def desSuscripcion (request):
     if request.method == 'POST':
         nombreUser = request.POST['nombreUser']
 
-        selUsuario = Suscrito.objects.get(nombreUser=nombreUser)
-
         # Eliminando al usuario identificado
-        Suscrito.objects.filter(nombreUser=selUsuario).delete()
+        Cliente.objects.filter(nombreCli=nombreUser).delete()
 
         """ datosObtenidos = {
             'nombreUser' : nombreUser
@@ -98,6 +92,10 @@ def desSuscripcion (request):
 
     return render(request, 'core/index.html', datosObtenidos) """
     return redirect('index.html')
+
+# Cerrar Sesión
+def cerrarSesión (request):
+    return redirect('loginRegisterUser.html')
 
 # Página en la que se visualiza los productos seleccionados a comprar
 def listadoCompras (request):
@@ -115,6 +113,8 @@ def obtenerDatosCompraProducto (request):
         }
 
     return render(request, 'core/listadoCompras.html', datosObtenidos)
+
+#-------------------------------------------------------------------------------------------#
 
 # MANTENEDORES
 # Clientes
@@ -169,6 +169,8 @@ def delClientes (request):
         Cliente.objects.filter(nombreCli=nombreUserDel).delete()
 
     return redirect('mantenedorClientes.html')
+
+#-------------------------------------------------------------------------------------------#
 
 # Usuarios
 def mantenedorUsuarios (request):

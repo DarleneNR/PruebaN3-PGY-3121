@@ -139,7 +139,7 @@
                 <div class="row" id="border-row">
                     {% for i in productos %}
                         <div class="col-4" id="border-col">
-                            <form name="form-productos" id="form-productos" action="{% url 'obtenerDatosCompraProducto' %}" method="POST">
+                            <form name="form-productos" id="form-productos" action="" method="POST"> <!-- {% url 'obtenerDatosCompraProducto' %} -->
                                 {% csrf_token %}
                                 <section class="mostrarInfo">
                                     <a class="product-id" type="hidden" name="idProducto" value="{{i.idProducto}}"></a><br>
@@ -147,7 +147,8 @@
                                     <a class="product-nombre" name="nombreProduci.nomto" value="{{breProducto}}">{{i.nombreProducto}}</a><br>
                                     <a class="product-precio" name="precioUnidad" value="{{i.precioUnidad}}">${{i.precioUnidad}}</a><br>
                                     <a class="product-stock" name="cantStock" value="{{i.cantStock}}">Stock disponible: {{i.cantStock}}</a><br>
-                                    <a href="{% url 'listadoCompras.html' %}"><button type="submit" class="btn btn-primary" id="agregarProducto" name="agregarProducto" value="agregarProducto">Comprar</button></a>
+                                    <a href=""><button type="submit" class="btn btn-primary" id="agregarProducto" name="agregarProducto" value="agregarProducto">Comprar</button></a>
+                                    <!-- {% url 'listadoCompras.html' %} -->
                                 </section>
                             </form>
                         </div>
