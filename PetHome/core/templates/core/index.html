@@ -39,9 +39,14 @@
                                 <li class="nav-item active"><a href="{% url 'index.html' %}" class="nav-link text-uppercase font-weight-bold">Inicio</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Nosotros</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Productos</a></li>    
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Galería</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Mis movimientos</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="" style="margin-bottom:-5px;margin-left:-30px;font-size:15px;" class="sub-item">Historial de Compras</a></li>
+                                        <li><a href="" style="margin-bottom:-10px;margin-left:-30px;font-size:15px;padding-bottom: 25px;" class="sub-item">Historial de Donaciones</a></li>
+                                    </ul>
+                                </li>
                                 <li class="nav-item"><a href="{% url 'donarSuscripcion.html' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="suscripcion">Donar aquí</a></li>
-                                <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Cerrar Sesión</a></li>
+                                <li class="nav-item"><a href="{% url 'cerrarSesión' %}" class="nav-link text-uppercase font-weight-bold btn btn-info" type="button" id="cerrarSesion">Salir</a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,25 +136,23 @@
             </div>
             <!-- Listado de Productos Disponibles -->
             <div class="listar-productos">
-                <form name="form-productos" id="form-productos" action="{% url 'obtenerDatosCompraProducto' %}" method="POST">
-                    {% csrf_token %}
-                    <div class="row" id="border-row">
-                        {% for i in productos %}
-                            <div class="col-4" id="border-col">
-                                <a href="#">
-                                    <section class="mostrarInfo">
-                                        <span class="product-id" type="hidden" name="idProducto" value="{{i.idProducto}}"></span><br>
-                                        <span class="product-categoria" name="idCategoria">{{i.idCategoria}}</span><br>
-                                        <span class="product-nombre" name="nombreProducto">{{i.nombreProducto}}</span><br>
-                                        <span class="product-precio" name="precioUnidad">${{i.precioUnidad}}</span><br>
-                                        <span class="product-stock" name="cantStock">Stock disponible: {{i.cantStock}}</span><br>
-                                        <a href=""><button type="submit" class="btn btn-primary" id="agregarProducto" name="agregarProducto" value="agregarProducto">Comprar</button></a>
-                                    </section>
-                                </a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </form>
+                <div class="row" id="border-row">
+                    {% for i in productos %}
+                        <div class="col-4" id="border-col">
+                            <form name="form-productos" id="form-productos" action="{% url 'obtenerDatosCompraProducto' %}" method="POST">
+                                {% csrf_token %}
+                                <section class="mostrarInfo">
+                                    <a class="product-id" type="hidden" name="idProducto" value="{{i.idProducto}}"></a><br>
+                                    <a class="product-categoria" name="idCategoria" value="{{i.idCategoria}}">{{i.idCategoria}}</a><br>
+                                    <a class="product-nombre" name="nombreProduci.nomto" value="{{breProducto}}">{{i.nombreProducto}}</a><br>
+                                    <a class="product-precio" name="precioUnidad" value="{{i.precioUnidad}}">${{i.precioUnidad}}</a><br>
+                                    <a class="product-stock" name="cantStock" value="{{i.cantStock}}">Stock disponible: {{i.cantStock}}</a><br>
+                                    <a href="{% url 'listadoCompras.html' %}"><button type="submit" class="btn btn-primary" id="agregarProducto" name="agregarProducto" value="agregarProducto">Comprar</button></a>
+                                </section>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
 		    </div>
         </div>
         <!-- Fin Sección: Productos a la venta -->

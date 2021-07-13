@@ -82,6 +82,7 @@ def suscripcionUsuario (request):
 
     return redirect('index.html')
 
+# Eliminación de Suscripción
 def desSuscripcion (request):
     if request.method == 'POST':
         nombreUser = request.POST['nombreUser']
@@ -98,13 +99,22 @@ def desSuscripcion (request):
     return render(request, 'core/index.html', datosObtenidos) """
     return redirect('index.html')
 
+# Página en la que se visualiza los productos seleccionados a comprar
 def listadoCompras (request):
     return render(request,'core/listadoCompras.html')
 
+# Obteniendo los datos del producto seleccionado
 def obtenerDatosCompraProducto (request):
     if request.method == 'POST':
         idProducto = request.POST['idProducto']
 
         selProducto = Producto.objects.get(idProducto=idProducto)
-    
-    return render(request,'core/listadoCompras.html', selProducto)
+        
+        datosObtenidos = {
+            'selProducto' : selProducto
+        }
+
+    return render(request,'core/listadoCompras.html', datosObtenidos)
+
+# MANTENEDORES
+

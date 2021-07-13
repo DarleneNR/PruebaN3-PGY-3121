@@ -11,6 +11,6 @@ urlpatterns = [
     path('cerrarSesión', cerrarSesión, name="cerrarSesión"),
     path('suscripcionUsuario', suscripcionUsuario, name="suscripcionUsuario"),
     path('desSuscripcion', desSuscripcion, name="desSuscripcion"),
-    path('listadoCompras', listadoCompras, name="listadoCompras.html"),
+    path('listadoCompras/', listadoCompras, name="listadoCompras.html"),
     path('obtenerDatosCompraProducto', obtenerDatosCompraProducto, name="obtenerDatosCompraProducto"),
 ]

@@ -31,12 +31,17 @@
     transition: all 0.4s;
 }
 
+/* ul {
+    padding-left: 1rem;
+    padding-right: 0px auto;
+} */
+
 .navbar .nav-link {
     color: #ffffff;
     margin-top: 18px;
     margin-bottom: 18px;
     /*margin-right: 10px;*/
-    margin-left: 62px;
+    margin-left: 40px;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
     display: inline-block;
@@ -51,7 +56,7 @@
     margin-top: 18px;
     margin-bottom: 18px;
     margin-left: 0px;
-    margin-right: 50px;
+    margin-right: 183px;
 }
 
 .navbar .nav-link:hover,
@@ -129,6 +134,58 @@ a.navbar-brand.text-uppercase.font-weight-bold {
     display: block;
     transition: all 0.3s ease-in-out;
     animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+/* Sub Menú */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #1a1b1db9;
+}
+
+/* header ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bolder;
+} */
+
+header ul ul {
+    position: absolute;
+    top: 60px;
+    display: block;
+    background-color: #d1d1d194;
+    border-radius: 0.5em;
+    transform: translateX(4%);
+    opacity: 0;
+    transition: all.2s;
+    padding: 0;
+    font-family: "Microsoft Sans Serif";
+    margin-left: 16px;
+}
+
+.sub-menu {
+    width: 195px;
+    padding-left: 25px;
+}
+
+header ul li:hover ul {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+header ul li a.sub-item:hover {
+    transform: translateX(4px);
+    transition: all.3s;
+    color: #44494cb9;
 }
 
 /* Botón para Suscripción / Donación */
@@ -323,7 +380,9 @@ a:hover {
 }
 
 .product-id {
+    color: #ffffff;
     font-size: xx-small;
+    text-align: -webkit-center;
 }
 .product-categoria {
     color: #6b6b6b;
